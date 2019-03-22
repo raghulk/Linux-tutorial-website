@@ -1,0 +1,136 @@
+*{
+	padding:0;
+	margin:0;
+}
+#leftColumn 
+{
+	width: 90%;
+	display: table-cell;
+	padding-right: 5em;
+	}
+#rightColumn 
+{
+	display: table-cell;
+	width: 10%;
+	left:90%;
+}
+.headerImg
+ {
+ max-height:3em;
+ width:auto;
+ }
+ .break 
+ {
+	 width:5%;
+	 display: table-cell;
+ }
+.logo{
+	background: #777777;
+}
+.sections {
+	border-style: solid;
+	border-color:#0099CC;
+	border-width:.3em;
+	color:#0099CC;
+	background: #ECEFEF;
+
+}
+.moresections {
+	border-style: solid;
+	border-color:#CE5147;
+	border-width:.3em;
+	color:#CE5147;
+	background: #ECEFEF;
+}
+#leftSectionA 
+{
+	display: table-cell;
+	padding-right: 5em;
+	margin-right: 5%;
+	width: 20%;
+	border-style: solid;
+	border-color:#0099CC;
+	border-width:.2em;
+	border-bottom-width:.4em;
+	color: black;
+}
+#midSectionA 
+{
+	display: table-cell;
+	width: 20%;
+	margin-right: 5%;
+	margin-left: 5%;
+	padding-right: 5em;
+	vertical-align: top;
+	border-style: solid;
+	border-color:#0099CC;
+	border-width:.2em;
+	border-bottom-width:.6em;
+	color: black;
+}
+#rightSectionA 
+{
+	display: table-cell;
+	width: 20%;
+	padding-right: 5em;
+	margin-left: 5%;
+	vertical-align: top;
+	border-style: solid;
+	border-color:#0099CC;
+	border-width:.2em;
+	border-bottom-width:.8em;
+	color: black;
+}
+.sectionLogo {
+	background-color:#0099CC;
+	width:70%;
+	border-radius:50%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.tagline {
+	background: #2334FF;
+	height: 3em;
+	border-style: solid;
+	border-color:#2334FF;
+	border-width:.2em;
+}
+#leftSectionB 
+{
+	display: table-cell;
+	padding-right: 5em;
+	width: 30%;
+	border-style: solid;
+	border-color:#CE5147;
+	border-width:.2em;
+	color: black;
+}
+#midSectionB
+{
+	display: table-cell;
+	width: 30%;
+	vertical-align: top;
+	border-style: solid;
+	border-color:#CE5147;
+	border-width:.2em;
+	color: black;
+}
+#rightSectionB 
+{
+	display: table-cell;
+	width: 30%;
+	vertical-align: top;
+	border-style: solid;
+	border-color:#CE5147;
+	border-width:.2em;
+	color: black;
+}
+footer {
+	background: #107E7D;
+	text-align:center;
+	height: 5em;
+	width:100%;
+}
+ul {
+  list-style-type: none;
+}

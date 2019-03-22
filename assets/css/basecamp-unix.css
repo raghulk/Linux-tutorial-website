@@ -1,0 +1,105 @@
+header{
+    position: sticky;
+    background-color: #107E7D;
+}
+
+body {
+    background-color: #ECEFEF;
+    margin: 0;
+}
+
+#navLogo img{
+    float: left;
+    width: 6%;
+    margin-left: 2em;
+}
+
+#mainLogo img{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#placeholder img{
+    float: right;
+    margin-right: 5em;
+    width: 31%;
+}
+
+#homeRect {
+  border: 2px solid #044B7F;
+  font-size: 30px;
+  color: #044B7F;
+  padding: 10px;
+  margin: auto;
+  width: 85%;
+}
+
+h1 {
+  border-bottom: 2px solid #0099CC;
+  color: #0099CC;
+  clear:both;
+  font-size: 20px;
+  margin: 1.5em;
+  display: block;
+  width: 45%;
+}
+
+.head2 h1 {
+  color: #CE8147;
+  border-bottom: 2px solid #CE8147;
+}
+
+.section {
+  margin: auto;
+  width: 60%;
+  margin-bottom: 3em;
+  float: right;
+}
+
+.row{
+  margin-left: 7em;
+}
+
+.dot {
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #0099CC;
+  margin-bottom: -1.6em;
+}
+
+.smallRect {
+  border: 2px solid #0099CC;
+  color: #0099CC;
+  width: 70%;
+  margin-bottom: 1em;
+  padding: 25px;
+  display: inline-block;
+}
+
+.card {
+  border: 4px solid #CE8147;
+  color: #CE8147;
+  height: 18em;
+  margin: auto auto 7.91em 6em;
+  width: 20%;
+  display: inline-block;
+  padding: 10px;
+}
+
+.bigRect {
+  border: 2px solid white;
+  width: 60%;
+  height: 18em;
+  display: inline-block;
+  margin-top: 3em;
+  margin-left: 16em;
+}
+
+footer {
+  background-color: #107E7D;
+  height: 25em;
+}
