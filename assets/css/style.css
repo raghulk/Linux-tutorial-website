@@ -1,17 +1,14 @@
 /** COLORS 
-
 #107E7D  - Turquoise
 #044B7F - Dark blue 
 #ECEFEF - Grayish white (background)
 #CE8147 - Orange
 #253031 - Off Black
 #0099CC - Bright Blue 
-
 FONTS 
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     font-family: 'Roboto Mono', monospace;
-
 **/
 
 *{
@@ -102,6 +99,7 @@ nav{
     background-color:#107E7D;
     position:sticky;
     top:0;
+    z-index: 1;
 }
 
 nav img{
@@ -135,5 +133,18 @@ nav li a:visited{
 nav li a:hover{
     color:#0099CC;
 }
+/* .nav for screen min 570 */
+.nav a{
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top:2%;
+    text-decoration: none;
 
-
+}
+.nav a:visited{
+    color:white;
+}
+.nav a:hover{
+    color:#0099CC;
+}
