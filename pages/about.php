@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $title = "About";
     $content ="content";
     $prefix ="../";

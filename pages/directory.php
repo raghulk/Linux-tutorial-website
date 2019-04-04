@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     $title = "Lessons and Quizzes";
     $content ="Basecamp Unix Lessons and Quizzes";
     $prefix ="../"; 

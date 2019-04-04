@@ -1,4 +1,6 @@
         <?php 
+            session_start();
+
             $title = "Basecamp-Unix";
             $content ="content";
             $prefix =""; 

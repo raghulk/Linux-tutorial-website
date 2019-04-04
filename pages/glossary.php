@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     $title = "Glossary";
     $content ="content";
     $prefix ="../"; 
