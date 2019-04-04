@@ -8,13 +8,15 @@
     $script ="pageScript.js";
 
     include "../head.php";
+
+if(!empty($_POST)){
         
     if($_POST['name']!='' && $_POST['pass']!=''){
-        include $prefix."../../../dbConnect.php";
+        include $prefix."../../../dbConnect.inc";
         
-        $stmt = $conn -> prepare("SELECT * FROM users WHERE uname=? AND pass=?");
+        $stmt = $mysqli->prepare("SELECT * FROM users WHERE username=? AND password=?");
         
-        $stmt -> bind_param("ss",$_POST['name'],crypt($_POST['pass'],"$5$rounds=90962$n5.G/ugEDIleE4gE$D.JGtTUuy6mqb42TCr7cRkpFnm4Fc.svdyBNg5W7Oc0"));
+        $stmt->bind_param("ss",$_POST['name'],$_POST['pass']);
         
         $stmt -> execute();
         $stmt -> store_result();
@@ -32,6 +34,7 @@
     }else{
         echo "missing username or pass";
     }
+}
 ?>
 
 <div id ="login-container" class ="login">

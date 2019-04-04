@@ -7,19 +7,6 @@
 
     include "../head.php";
 
-    if ($_POST['name']!='' $$ $_POST['pass']!='' && $_POST['pass2']!='' && passMatch()){
-        include $prefix."../../../dbConnect.php";
-        
-        $stmt = $conn -> prepare("INSERT INTO users (name, pass) VALUES (?,?)");
-        
-        $stmt -> bind_param("ss",$_POST['name'], crypt($_POST['pass'],"$5$rounds=90962$n5.G/ugEDIleE4gE$D.JGtTUuy6mqb42TCr7cRkpFnm4Fc.svdyBNg5W7Oc0"));
-        
-        $stmt -> execute();
-        $stmt -> close();
-        
-        header('Location: login.php');
-    }
-
     function passMatch(){
         if(strcmp($_POST['pass'], $_POST['pass2']) ==0){
             return true;
@@ -27,7 +14,23 @@
             return false;
         }
     }
+
+if(!empty($_POST)){
+    if ($_POST['name']!='' && $_POST['pass']!='' && $_POST['pass2']!='' && passMatch()){
+        include $prefix."../../../dbConnect.inc";
         
+        $stmt = $mysqli->prepare("INSERT INTO users (username, password) VALUES (?,?)");
+        
+        $stmt -> bind_param("ss",$_POST['name'],$_POST['pass']);
+        
+        $stmt -> execute();
+        $stmt -> close();
+        
+        header('Location: login.php');
+    }
+
+
+}
 ?>
 
 <div id ="register-container" class ="login">
