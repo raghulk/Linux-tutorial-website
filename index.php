@@ -14,14 +14,13 @@
     </div>
 
     <div id="homeRect">
-        <p>[Tagline or 1-2 sentence hook] Lorem ipsum dolor sit
-            amet, cons ectetuer adipiscing elit, sed diam.</p>
+        <p>Prepare to start your Unix journey by learning the basics here!</p>
     </div>
     
         <h1>SECTION HEAD</h1>
    
-    <div id="placeholder">
-        <img src="assets/images/placehold.jpg">    
+    <div id="home-img">
+        <img src="assets/images/home.jpg" alt ="boy at computer" title ="Boy at computer">    
     </div>
     
     <div class="section">

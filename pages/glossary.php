@@ -1,8 +1,8 @@
 <?php 
-    $title = "Grossary-Page";
+    $title = "Glossary";
     $content ="content";
     $prefix ="../"; 
-    $styleFile ="grossary.css";
+    $styleFile ="glossary.css";
     $script ="script.js";
 
     include "../head.php"; 
