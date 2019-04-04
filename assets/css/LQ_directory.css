@@ -79,3 +79,56 @@
     background-color:#107E7D;
     color:white;
 }
+
+@media only screen and (max-width:850px){
+    html{
+        overflow-x:hidden;
+    }
+    #LQ-wrap{
+        width:90vw;
+    }
+    
+    #LQ-wrap p{
+        height:auto;
+    }
+    
+    #lessons-dir, #quizzes-dir{
+        grid-template-columns:1fr;
+        grid-template-rows: 10em 10em 10em;
+    }
+    
+    #l1, #l2, #l3, #q1, #q2, #q3{
+        grid-column:1;
+    }
+    
+    .icon-holder{
+        margin:2.5em .5em;
+        float:left;
+    }
+    
+    .lesson-card, .quiz-card{
+        height:10em;
+    }
+    
+    .lesson-card h4{
+        padding-right:3em;
+    }
+    
+    #LQ-wrap button{
+        margin:0 46%;
+    }
+}
+
+@media only screen and (max-width:500px){
+    #LQ-wrap{
+        width:100vw;
+    }
+    
+    #lessons-dir, #quizzes-dir{
+        grid-template-rows:15em 15em 15em;
+    }
+    
+    .lesson-card, .quiz-card{
+        height:15em;
+    }
+}
