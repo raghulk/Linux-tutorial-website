@@ -56,6 +56,12 @@
     margin:1em auto;
 }
 
+.icon-holder img{
+    max-width: 70%;
+    height:auto;
+    margin:18% 15%;
+}
+
 .lesson-card h4, .quiz-card h4{
     color:white;
     text-align:center;
