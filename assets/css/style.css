@@ -91,7 +91,7 @@ button{
 }
 
 button:hover{
-    background-color:#107E7D;
+    background-color:rgb(182, 197, 197);
 }
 
 nav{
@@ -107,7 +107,6 @@ nav img{
     margin:1em 1em 0 1em;
     max-height:5em;
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
