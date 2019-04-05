@@ -16,42 +16,12 @@
     <script src="<?php echo $prefix?>assets/js/mobile-responsive-touch.js"></script>
 <!--     anything else that you need; needs formatted as full <link> or <script> tag, proper path included-->
     <!-- <?php echo $extras ?> -->
-    <!-- unknow what is this variable, by:weibin -->
+    <!-- unknow what is this variable, by:weibin 
+    This is anything that's not accounted for by the $script or $style variables. Anything you would put in the head, just type in the extras variable like you're inserting it straight into the head (include <link> or <script> tags) -Christine  -->
 </head>
 
 <body>
     
-<nav>
-    <a href ="<?php echo $prefix ?>index.php"><img src ="<?php echo $prefix ?>assets/images/AltLogo%20(translucent%20no-tag).png" alt ="Basecamp Unix Logo" title ="Basecamp Unix"></a>
-    <div class="screen-max-570">
-        <ul>
-            <li><a href ="#">Login</a></li>
-            <li><a href ="<?php echo $prefix ?>pages/grossary.php">Glossary</a></li>
-            <li><a href ="<?php echo $prefix ?>pages/directory.php">Lessons and Quizzes</a></li>
-            <li><a href ="#">About</a></li>
-        </ul>
-    </div>
-    <!-- for screen that min 570 -->
-    <div class="screen-min-570">
-        <div class="nav">
-            <div class="burger-menu" id="burger-menu">
-                <div class="burger-menu-block">
-                    <div class="burger-float-block-right">
-                        <div class="burger-float-right">
-                            <div class="burger"></div>
-                            <div class="burger"></div>
-                            <div class="burger"></div>
-                        </div>
-                    </div>
-                    <!-- .div menu -->
-                    <div class="li">
-                        <div><a href ="#">Login</a></div>
-                        <div><a href ="<?php echo $prefix ?>pages/grossary.php">Glossary</a></div>
-                        <div><a href ="<?php echo $prefix ?>pages/directory.php">Lessons and Quizzes</a></div>
-                        <div><a href ="#">About</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
+<!--The navigation is in the nav.php file, added in here-->
+<!--This should be a separate file because the php is doing some checking to see if the user is logged in, and it would be confusing to put it here-->
+<?php require "nav.php" ?>
