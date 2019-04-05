@@ -1,0 +1,69 @@
+*
+{
+	padding:0;
+	margin:0;
+}
+body
+{
+background-color:#ECEFEF;
+}
+#leftColumn 
+{
+	width: 20%;
+	display: table-cell;
+	padding-right: 5em;
+	}
+#rightColumn 
+{
+	display: table-cell;
+	width: 75%;
+}
+.sideMenu h5{
+	background-color: #107E7D;
+	color:#FFFFFF;
+	height:2em;
+}
+.sideMenu {
+	color:#0099CC;
+	background-color:#ECEFEF;
+	width:95%;
+	border-style: solid;
+	border-color:#004B7F;
+	border-width:.2em;
+	border-bottom-width:.4em;
+}
+.sideMenu p {
+	height:2em;
+	border-bottom-width:.4em;
+	border-style: solid;
+	border-color:#004B7F
+}
+h1 {
+	color:#107e7d;
+}
+.content {
+		width:80%;
+}
+.lesson {
+	border-style: solid;
+	border-color:#004B7F;
+	border-width:.2em;
+	border-bottom-width:.4em;
+	height: 70%;
+}
+.quiz {
+	border-style: solid;
+	border-color:#004B7F;
+	border-width:.2em;
+	border-bottom-width:.4em;
+	height:20%;
+}
+.quiz h5 {
+	text-align:right;
+}
+button {
+height:2em;
+border-radius:60%;
+background-color:#004B7F;
+font:#FFFFFF
+}
