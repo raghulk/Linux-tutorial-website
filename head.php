@@ -12,6 +12,7 @@
     <!-- common mobile responsive css -->
     <link rel = "stylesheet" href ="<?php echo $prefix ?>assets/css/mobile-responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+    <!-- js script for mobile responsive, code for mobile touch listener -->
     <script src="<?php echo $prefix?>assets/js/mobile-responsive-touch.js"></script>
 <!--     anything else that you need; needs formatted as full <link> or <script> tag, proper path included-->
     <!-- <?php echo $extras ?> -->
