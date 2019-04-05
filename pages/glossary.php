@@ -4,7 +4,7 @@
     $content ="content";
     $prefix ="../"; 
     $styleFile ="glossary.css";
-    $script ="script.js";
+    $script ="mobile-responsive-touch.js";
 
     include "../head.php"; 
 ?>
