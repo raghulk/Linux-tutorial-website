@@ -1,9 +1,13 @@
+<!-- Checking to see if the user is logged in-->
+<!-- if the user is logged in, change the "Login" on the nav to be a message custom to the user name (and will log user out)-->
 <?php
 
 $login ='<li><a href ="'.$prefix.'pages/login.php">Login</a></li>';
+$loginMobile ='<a href ="'.$prefix.'pages/login.php">Login</a>';
 if(!empty($_SESSION)){
     if (session_status()==PHP_SESSION_ACTIVE){
-        $login ="<li><a href ='".$prefix."pages/logout.php'>Hi, ".$_SESSION['name']."! ( Logout)</a>";
+        $login ="<li><a href ='".$prefix."pages/logout.php'>Hi, ".$_SESSION['name']."! ( Logout)</a></li>";
+        $loginMobile ="<a href ='".$prefix."pages/logout.php'>Hi, ".$_SESSION['name']."! ( Logout)</a>";
     }
 }
 ?>
@@ -31,7 +35,7 @@ if(!empty($_SESSION)){
                     </div>
                     <!-- .div menu -->
                     <div class="li">
-                        <div><a href ="#">Login</a></div>
+                        <div><?php echo $loginMobile; ?></div>
                         <div><a href ="<?php echo $prefix ?>pages/glossary.php">Glossary</a></div>
                         <div><a href ="<?php echo $prefix ?>pages/directory.php">Lessons and Quizzes</a></div>
                         <div><a href ="#">About</a></div>
