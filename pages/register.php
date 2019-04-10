@@ -19,7 +19,7 @@ if(!empty($_POST)){
     if ($_POST['name']!='' && $_POST['pass']!='' && $_POST['pass2']!='' && passMatch()){
         include $prefix."../../../dbConnect.inc";
         
-        $stmt = $mysqli->prepare("INSERT INTO users (username, password) VALUES (?,?)");
+        $stmt = $mysqli->prepare("INSERT INTO Login (Username, Password) VALUES (?,?)");
         
         $stmt -> bind_param("ss",$_POST['name'],$_POST['pass']);
         

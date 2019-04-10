@@ -14,7 +14,7 @@ if(!empty($_POST)){
     if($_POST['name']!='' && $_POST['pass']!=''){
         include $prefix."../../../dbConnect.inc";
         
-        $stmt = $mysqli->prepare("SELECT * FROM users WHERE username=? AND password=?");
+        $stmt = $mysqli->prepare("SELECT * FROM Login WHERE Username=? AND Password=?");
         
         $stmt->bind_param("ss",$_POST['name'],$_POST['pass']);
         
