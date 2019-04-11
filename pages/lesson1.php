@@ -6,21 +6,9 @@
     $script ="script.js";
 
     include "../head.php"; 
+    include"../assets/includes/sideMenu.php";
 ?>
-<div id="leftColumn"> 
-<div class="sideMenu" >
-	<h5>Lessons</h5>
-		<p><a href="#">Lesson 1</a> </p>
-		<p><a href="#">Lesson 2</a> </p>
-		<p><a href="#">Lesson 3</a> </p>
-	<h5>Quizzes</h5>
-		<p><a href="#">Quiz 1</a> </p>
-		<p><a href="#">Quiz 2</a> </p>
-		<p><a href="#">Quiz 3</a> </p>
-	<h5>References</h5>
-		<p><a href="#">Glossary</a> </p>
-</div> <!-- end of side menu -->
-</div>
+
 <div id="rightColumn"> 
 <div class="content" >
 	<h1> Lesson 1 </h1>
@@ -38,8 +26,9 @@
 
 	</div> <!-- end of lesson -->
 	<div class ="quiz">
-		<h5> Quiz 1  <a href="#"><button type="button">quiz 1</button></a></h5>
-	</div> <!-- end of quiz -->
+        <h5>Ready to begin the quiz?</h5>
+		<button id ="quiz-btn" type="button"><a href="#">Quiz 1</a></button>
+    </div> <!-- end of quiz -->
 </div> <!-- end of content -->
 </div> <!-- end of right column -->
 <?php include "foot.php" ?>

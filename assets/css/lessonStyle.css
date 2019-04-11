@@ -1,10 +1,8 @@
-*
-{
+*{
 	padding:0;
 	margin:0;
 }
-body
-{
+body{
 background-color:#ECEFEF;
 }
 #leftColumn 
@@ -30,7 +28,6 @@ background-color:#ECEFEF;
 	border-style: solid;
 	border-color:#004B7F;
 	border-width:.2em;
-	border-bottom-width:.4em;
 }
 .sideMenu p {
 	height:2em;
@@ -48,22 +45,54 @@ h1 {
 	border-style: solid;
 	border-color:#004B7F;
 	border-width:.2em;
-	border-bottom-width:.4em;
-	height: 70%;
+	min-height:70vh;
+    border-bottom:none;
 }
 .quiz {
 	border-style: solid;
 	border-color:#004B7F;
 	border-width:.2em;
-	border-bottom-width:.4em;
-	height:20%;
+	height:15vh;
 }
 .quiz h5 {
-	text-align:right;
+	text-align:center;
 }
+
+#quiz-btn a{
+    color:white;
+}
+
+/*
 button {
 height:2em;
 border-radius:60%;
 background-color:#004B7F;
 font:#FFFFFF
+}*/
+
+.sideMenu button{
+    border-radius:0;
+    background-color:#ECEFEF;
+    border-top:3px solid #004B7F;
+    width:100%;
+}
+
+button a{
+    text-decoration:none;
+}
+
+.sideMenu button:hover{
+    background-color:#004B7F;
+}
+
+.sideMenu button:hover > a{
+    color:white;
+}
+
+.sideMenu{
+    background-color:#107e7d;
+}
+
+.last{
+    border-bottom:3px solid #004B7F
 }
