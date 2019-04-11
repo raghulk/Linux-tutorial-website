@@ -67,6 +67,10 @@
     text-align:center;
 }
 
+.lesson-card a{
+    text-decoration: none;
+}
+
 #LQ-wrap p{
     height:6em;
 }
