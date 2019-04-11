@@ -7,34 +7,38 @@
     $styleFile ="login.css";
     $script ="pageScript.js";
 
-    include "../head.php";
+    
 
-if(!empty($_POST)){
-        
-    if($_POST['name']!='' && $_POST['pass']!=''){
-        include $prefix."../../../dbConnect.inc";
-        
-        $stmt = $mysqli->prepare("SELECT * FROM Login WHERE Username=? AND Password=?");
-        
-        $stmt->bind_param("ss",$_POST['name'],$_POST['pass']);
-        
-        $stmt -> execute();
-        $stmt -> store_result();
-        
-        if($stmt->num_rows>0){
-            $_SESSION['login']=true;
-            $_SESSION['name']=$_POST['name'];
-            header("Location: page.php");
-        }else{
-            echo "login failed";
-            var_dump($_POST);
+if(!empty($_POST['name']) && !empty($_POST['pass']) ){
+		//connect to database
+	   require $prefix.'../../../dbConnect.inc';
+
+		$stmt=$mysqli->prepare("SELECT Password FROM Login WHERE Username=?");
+		//bind
+		$stmt->bind_param("s",$_POST['name']);
+		//execute
+		$stmt->execute();
+		//store results
+		$stmt->bind_result($res);
+		$stmt->fetch();
+
+		if (password_verify($_POST['pass'], $res)) {
+			$_SESSION['login']=true;
+			$_SESSION['name']=$_POST['name'];
+			header("Location: ../index.php");
+            //echo "logged in";
+		} else{
+            //echo "failed";
         }
-        $stmt ->close();
-        
-    }else{
-        echo "missing username or pass";
-    }
-}
+
+		$stmt->close();
+	}else{
+		//echo 'Missing username or pass';
+	}
+
+//include header file if user isn't redirected to a new page
+include "../head.php";
+
 ?>
 
 <div id ="login-container" class ="login">
