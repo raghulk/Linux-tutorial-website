@@ -6,7 +6,7 @@ body{
 background-color:#ECEFEF;
 }
 
-#lesson-wrap{
+#lesson-wrap, #quiz-wrap{
     display:grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
@@ -67,6 +67,10 @@ h1 {
 
 #quiz-btn a{
     color:white;
+}
+
+#quiz-btn{
+    margin-top:1em;
 }
 
 /*

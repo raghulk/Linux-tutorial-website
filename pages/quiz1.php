@@ -1,26 +1,24 @@
 <?php 
-    $title = "Lesson 2";
-    $content ="Unix Lesson 2";
+    $title = "Quiz 1";
+    $content ="Unix Quiz 1";
     $prefix ="../"; 
     $styleFile ="lessonStyle.css";
     $script ="script.js";
 
     include "../head.php"; 
-
 ?>
-<div id ="lesson-wrap">
+
+<div id ="quiz-wrap">
     <?php include"../assets/includes/sideMenu.php"; ?>
     <div id="rightColumn"> 
     <div class="content" >
-        <h1> Lesson 2 </h1>
+        <h1> Quiz 1 </h1>
         <div class="lesson">
-            <h3>Title </h3>
-            <p> Content</p>
+            <p>Questions go here</p>
 
         </div> <!-- end of lesson -->
         <div class ="quiz">
-            <h5>Ready to begin the quiz?</h5>
-            <button id ="quiz-btn" type="button"><a href="#">Quiz 1</a></button>
+            <button id ="quiz-btn" type="button"><a href="#">Submit</a></button>
         </div> <!-- end of quiz -->
     </div> <!-- end of content -->
     </div> <!-- end of right column -->

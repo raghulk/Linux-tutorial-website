@@ -1,6 +1,6 @@
 <?php 
-    $title = "Lesson 1";
-    $content ="content";
+    $title = "Lesson 3";
+    $content ="Unix Lesson 3";
     $prefix ="../"; 
     $styleFile ="lessonStyle.css";
     $script ="script.js";
