@@ -5,16 +5,28 @@
 body{
 background-color:#ECEFEF;
 }
+
+#lesson-wrap{
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    width:80vw;
+    margin:2em auto;
+}
+
 #leftColumn 
 {
-	width: 20%;
-	display: table-cell;
+/*	width: 20%;*/
+/*	display: table-cell;*/
+    grid-column:1/2;
+    grid-row:1/2;
 	padding-right: 5em;
 	}
 #rightColumn 
 {
-	display: table-cell;
-	width: 75%;
+/*	display: table-cell;*/
+    grid-column: 2/3;
+    grid-row:1/2;
 }
 .sideMenu h5{
 	background-color: #107E7D;
@@ -29,12 +41,7 @@ background-color:#ECEFEF;
 	border-color:#004B7F;
 	border-width:.2em;
 }
-.sideMenu p {
-	height:2em;
-	border-bottom-width:.4em;
-	border-style: solid;
-	border-color:#004B7F
-}
+
 h1 {
 	color:#107e7d;
 }
@@ -69,6 +76,10 @@ border-radius:60%;
 background-color:#004B7F;
 font:#FFFFFF
 }*/
+
+.sideMenu button a {
+	color:#107E7D;
+}
 
 .sideMenu button{
     border-radius:0;
