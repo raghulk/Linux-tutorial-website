@@ -13,19 +13,19 @@
     <h1 id ="lessons-h1">Lessons</h1>
     <div id ="lessons-dir">
         <div id ="l1" class ="lesson-card">
-            <div class ="icon-holder"><img src ="../assets/images/Monitor.png"></div>
+            <div class ="icon-holder"><img src ="../assets/images/monitor_DkBl.png"></div>
             <h4>Lesson One</h4>
             <p>A very short lesson description.</p>
             <button>Begin</button>
         </div>
         <div id ="l2" class ="lesson-card">
-            <div class ="icon-holder"><img src ="../assets/images/commandPrompt.png"></div>
+            <div class ="icon-holder"><img src ="../assets/images/cp_DkBl.png"></div>
             <h4>Lesson Two</h4>
             <p>A very short lesson description.</p>
             <button>Begin</button>
         </div>
         <div id ="l3" class ="lesson-card">
-            <div class ="icon-holder"><img src ="../assets/images/up.png"></div>
+            <div class ="icon-holder"><img src ="../assets/images/up_DkBl.png"></div>
             <h4>Lesson Three</h4>
             <p>A very short lesson description.</p>
             <button>Begin</button>
@@ -35,19 +35,19 @@
     <h1 id ="quizzes-h1">Quizzes</h1>
     <div id ="quizzes-dir">
         <div id ="q1" class ="quiz-card">
-            <div class ="icon-holder"><img src ="../assets/images/Monitor.png"></div>
+            <div class ="icon-holder"><img src ="../assets/images/monitor_LtBl.png"></div>
             <h4>Quiz One</h4>
             <p>A very short quiz description.</p>
             <button>Begin</button>
         </div>
         <div id ="q2" class ="quiz-card">
-            <div class ="icon-holder"><img src ="../assets/images/commandPrompt.png"></div>
+            <div class ="icon-holder"><img src ="../assets/images/cp_LtBl.png"></div>
             <h4>Quiz Two</h4>
             <p>A very short quiz description.</p>
             <button>Begin</button>
         </div>
         <div id ="q3" class ="quiz-card">
-            <div class ="icon-holder"><img src ="../assets/images/up.png"></div>
+            <div class ="icon-holder"><img src ="../assets/images/up_LtBl.png"></div>
             <h4>Quiz Three</h4>
             <p>A very short quiz description.</p>
             <button>Begin</button>
