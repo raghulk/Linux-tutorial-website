@@ -1,7 +1,8 @@
 <?php 
     session_start();
-//	session_name("dan");
-	//should they be here?
+    session_name("login");
+
+    //check if they should have access
 	if(!$_SESSION['login']){
 		header('Location: index.php');
 	}

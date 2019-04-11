@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    session_name("login");
 
     $title = "Login";
     $content ="Login";
