@@ -1,11 +1,11 @@
 <?php 
     $title = "Lesson 1";
     $content ="content";
-    $prefix =""; 
+    $prefix ="../"; 
     $styleFile ="lessonStyle.css";
     $script ="script.js";
 
-    include "head.php"; 
+    include "../head.php"; 
 ?>
 <div id="leftColumn"> 
 <div class="sideMenu" >
