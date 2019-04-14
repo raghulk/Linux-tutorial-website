@@ -85,6 +85,10 @@
     color:#0099CC;
 }
 
+#quizzes-dir a{
+    text-decoration:none;
+}
+
 #LQ-wrap button:hover{
     background-color:#107E7D;
     color:white;

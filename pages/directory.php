@@ -17,19 +17,19 @@
             <div class ="icon-holder"><img src ="../assets/images/monitor_DkBl.png"></div>
             <h4>Lesson One</h4>
             <p>A very short lesson description.</p>
-            <button>Begin</button>
+            <a href ="<?php echo $prefix;?>pages/lesson1.php"><button>Begin</button></a>
         </div>
         <div id ="l2" class ="lesson-card">
             <div class ="icon-holder"><img src ="../assets/images/cp_DkBl.png"></div>
             <h4>Lesson Two</h4>
             <p>A very short lesson description.</p>
-            <button>Begin</button>
+            <a href ="<?php echo $prefix;?>pages/lesson2.php"><button>Begin</button></a>
         </div>
         <div id ="l3" class ="lesson-card">
             <div class ="icon-holder"><img src ="../assets/images/up_DkBl.png"></div>
             <h4>Lesson Three</h4>
             <p>A very short lesson description.</p>
-            <button>Begin</button>
+            <a href ="<?php echo $prefix;?>pages/lesson3.php"><button>Begin</button></a>
         </div>
     </div>
 <!--    end lessons-dir div-->
@@ -39,19 +39,19 @@
             <div class ="icon-holder"><img src ="../assets/images/monitor_LtBl.png"></div>
             <h4>Quiz One</h4>
             <p>A very short quiz description.</p>
-            <button>Begin</button>
+            <a href ="<?php echo $prefix;?>pages/quiz1.php"><button>Begin</button></a>
         </div>
         <div id ="q2" class ="quiz-card">
             <div class ="icon-holder"><img src ="../assets/images/cp_LtBl.png"></div>
             <h4>Quiz Two</h4>
             <p>A very short quiz description.</p>
-            <button>Begin</button>
+            <a href ="<?php echo $prefix;?>pages/quiz2.php"><button>Begin</button></a>
         </div>
         <div id ="q3" class ="quiz-card">
             <div class ="icon-holder"><img src ="../assets/images/up_LtBl.png"></div>
             <h4>Quiz Three</h4>
             <p>A very short quiz description.</p>
-            <button>Begin</button>
+            <a href ="<?php echo $prefix;?>pages/quiz3.php"><button>Begin</button></a>
         </div>
     </div>
 </div>
