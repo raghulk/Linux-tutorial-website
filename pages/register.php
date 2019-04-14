@@ -3,8 +3,9 @@
     $title = "Login";
     $content ="Login";
     $prefix ="../"; 
+    $filename = "register.php";
     $styleFile ="login.css";
-    $script ="pageScript.js";
+    $script ="login.js";
 
     
     //check if passwords match
@@ -48,13 +49,13 @@ include "../head.php";
     <form action ="<?php echo $_SERVER['PHP_SELF']; ?>" method ="POST" onsubmit ="return validateForm();">
 <!--        name-->
         <label for ="name">Username: </label><input id ="name" type ="text" name = "name" placeholder = "username"><br>
-        <p id ="errorName"></p><!-- show any error w/name -->
+        
         
 <!--        passwords-->
-        <label for ="pass">Password: </label><input id ="pass" type = "text" name = "pass" placeholder = "Password"><br>
+        <label for ="pass">Password: </label><input id ="pass" type = "password" name = "pass" placeholder = "Password"><br>
         
-        <label for ="pass2">Password (re-enter): </label><input id ="pass2" type = "text" name = "pass2" placeholder = "Password (re-enter)"><br>
-        <p id ="errorPass"></p><!-- show any error w/passwords -->
+        <label for ="pass2">Password (re-enter): </label><input id ="pass2" type = "password" name = "pass2" placeholder = "Password (re-enter)"><br>
+        <p id ="error-login"></p><!-- show any error w/login -->
         
         <div id ="register-btns">
 <!--            <input type ="reset" value ="Reset Form" id ="reset-btn">-->

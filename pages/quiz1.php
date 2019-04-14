@@ -1,6 +1,7 @@
 <?php 
     $title = "Quiz 1";
     $content ="Unix Quiz 1";
+    $filename = "quiz1.php";
     $prefix ="../"; 
     $styleFile ="lessonStyle.css";
     $script ="script.js";
@@ -23,4 +24,4 @@
     </div> <!-- end of content -->
     </div> <!-- end of right column -->
 </div>
-<?php include "foot.php" ?>
+<?php include "../foot.php" ?>

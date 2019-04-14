@@ -4,9 +4,12 @@
 
     $title = "Login";
     $content ="Login";
+    $filename = "login.php";
     $prefix ="../"; 
     $styleFile ="login.css";
-    $script ="pageScript.js";
+    $script ="login.js";
+
+$error = "";
 
     
 
@@ -30,6 +33,7 @@ if(!empty($_POST['name']) && !empty($_POST['pass']) ){
             //echo "logged in";
 		} else{
             //echo "failed";
+            $error = "**Wrong username or password.**";
         }
 
 		$stmt->close();
@@ -47,11 +51,10 @@ include "../head.php";
     <form action ="<?php echo $_SERVER['PHP_SELF']; ?>" method ="POST" onsubmit ="return validateForm();">
 <!--        name-->
         <label for ="name">Username: </label><input id ="name" type ="text" name = "name" placeholder = "username"><br>
-        <p id ="errorName"></p><!-- show any error w/name -->
         
 <!--        passwords-->
-        <label for ="pass">Password: </label><input id ="pass" type = "text" name = "pass" placeholder = "Password"><br>
-        <p id ="errorPass"></p><!-- show any error w/passwords -->
+        <label for ="pass">Password: </label><input id ="pass" type = "password" name = "pass" placeholder = "Password"><br>
+        <p id ="error-login"><?php echo $error ?></p>
         
         <input type ="submit" value = "Submit" id ="submit-btn">
     

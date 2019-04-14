@@ -2,6 +2,7 @@
     session_start();
     $title = "Glossary";
     $content ="content";
+    $filename = "glossary.php";
     $prefix ="../"; 
     $styleFile ="glossary.css";
     $script ="mobile-responsive-touch.js";
@@ -65,10 +66,5 @@
             </div>
         </div><!-- end of body part -->
         
-        <!-- begin of footer part -->
-        <div class="footer">
-            <div class="footer-circle-outline">
-            </div>
-        </div><!-- end of footer part -->
 
     <?php include "../foot.php" ?>

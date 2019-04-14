@@ -7,8 +7,9 @@
 		header('Location: login.php');
 	}
     
-    $title = "Page title";
-    $content ="content";
+    $title = "Profile";
+    $content ="Profile";
+    $filename = "profile.php";
     $prefix ="../"; 
     $styleFile ="style2.css";
     $script ="pageScript.js";

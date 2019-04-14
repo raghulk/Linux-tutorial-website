@@ -1,6 +1,7 @@
 #wrapper{
     width:70vw;
-    margin:0 auto;
+    margin:0 auto 3em auto;
+    
 }
 
 #about-h1{
@@ -20,7 +21,7 @@ h3.subheading-h3{
   position: relative;
   left: 5%;
 }
-  .contactComment{
+.contactComment{
     width: 400px;
     border: 2px solid #044B7F;
     position: relative;
@@ -34,12 +35,14 @@ p {
     padding-left: .5em;
   }
 
+/*
 footer {
   background-color: #107E7D;
   position:absolute;
   bottom:0;
   width:100%;
 }
+*/
 
 .bigRect {
   border: 2px solid white;

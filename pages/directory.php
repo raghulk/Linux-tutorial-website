@@ -2,6 +2,7 @@
     session_start();
     $title = "Lessons and Quizzes";
     $content ="Basecamp Unix Lessons and Quizzes";
+    $filename = "directory.php";
     $prefix ="../"; 
     $styleFile ="LQ_directory.css";
     $script ="script.js";

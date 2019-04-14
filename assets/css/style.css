@@ -149,3 +149,19 @@ nav li a:hover{
 }
 
 
+/*footer*/
+
+footer{
+    background-color:#107E7D;
+    min-height:30vh;
+    padding:1em;
+    clear:both;
+    margin-top:2em;
+}
+
+footer p{
+    width:40vw;
+    margin:0 auto;
+    padding:.5em;
+    color:white;
+}

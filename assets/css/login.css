@@ -51,6 +51,7 @@ label{
     float:left;
 }
 
-
-
+#error-div{
+    font-size:2em;
+}
 

@@ -2,6 +2,7 @@
     session_start();
     $title = "About";
     $content ="content";
+    $filename = "about.php";
     $prefix ="../";
     $styleFile ="about.css";
     $script ="script.js";
@@ -39,10 +40,12 @@
    </div>
  </div>
 
+<!--
    <footer>
      <img class="above" src="../assets/images/aboveFooter.png" alt="Logo">
      <div class="bigRect"></div>
    </footer>
+-->
 
 
 <?php include "../foot.php"; ?>

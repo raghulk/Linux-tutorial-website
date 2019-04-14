@@ -19,7 +19,7 @@ if(!empty($_SESSION)){
             <?php echo $login; ?>
             <li><a href ="<?php echo $prefix ?>pages/glossary.php">Glossary</a></li>
             <li><a href ="<?php echo $prefix ?>pages/directory.php">Lessons and Quizzes</a></li>
-            <li><a href ="#">About</a></li>
+            <li><a href ="<?php echo $prefix ?>pages/about.php">About</a></li>
         </ul>
     </div>
     <div class="screen-min-570">
@@ -38,7 +38,7 @@ if(!empty($_SESSION)){
                         <div><?php echo $loginMobile; ?></div>
                         <div><a href ="<?php echo $prefix ?>pages/glossary.php">Glossary</a></div>
                         <div><a href ="<?php echo $prefix ?>pages/directory.php">Lessons and Quizzes</a></div>
-                        <div><a href ="#">About</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/about.php">About</a></div>
                     </div>
                 </div>
             </div>

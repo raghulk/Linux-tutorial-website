@@ -4,6 +4,7 @@
 
             $title = "Basecamp-Unix";
             $content ="content";
+            $filename = "index.php";
             $prefix =""; 
             $styleFile ="basecamp-unix.css";
             $script ="script.js";
@@ -28,7 +29,7 @@
     
     <div class="section">
         <div class="row">
-            <div class ="icon-holder dot"><img src ="../assets/images/monitor_white.png"></div>
+            <div class ="icon-holder dot"><img src ="assets/images/monitor_white.png"></div>
 
             <div class="smallRect">
                 <h4>Why learn Unix?</h4>
@@ -37,7 +38,7 @@
         </div><br>
         
         <div class="row">
-            <div class ="icon-holder dot"><img src ="../assets/images/cp_white.png"></div>
+            <div class ="icon-holder dot"><img src ="assets/images/cp_white.png"></div>
 
             <div class="smallRect">
                 <h4>How hard will these lessons be?</h4>
@@ -46,7 +47,7 @@
         </div><br>
         
         <div class="row">
-            <div class ="icon-holder dot"><img src ="../assets/images/up_white.png"></div>
+            <div class ="icon-holder dot"><img src ="assets/images/up_white.png"></div>
 
             <div class="smallRect">
                 <h4>Can this be used in the classroom?</h4>
@@ -61,22 +62,22 @@
     <div id ="cards">
         <div id ="lessons-dir">
         <div id ="l1" class ="lesson-card">
-            <div class ="icon-holder"><img src ="../assets/images/monitor_DkBl.png"></div>
+            <div class ="icon-holder"><img src ="assets/images/monitor_DkBl.png"></div>
             <h4>Lesson One</h4>
             <p>A very short lesson description.</p>
-            <a href ="pages/Lesson%201.php"><button>Begin</button></a>
+            <a href ="pages/lesson1.php"><button>Begin</button></a>
         </div>
         <div id ="l2" class ="lesson-card">
-            <div class ="icon-holder"><img src ="../assets/images/cp_DkBl.png"></div>
+            <div class ="icon-holder"><img src ="assets/images/cp_DkBl.png"></div>
             <h4>Lesson Two</h4>
             <p>A very short lesson description.</p>
-            <button>Begin</button>
+            <a href ="pages/lesson2.php"><button>Begin</button></a>
         </div>
         <div id ="l3" class ="lesson-card">
-            <div class ="icon-holder"><img src ="../assets/images/up_DkBl.png"></div>
+            <div class ="icon-holder"><img src ="assets/images/up_DkBl.png"></div>
             <h4>Lesson Three</h4>
             <p>A very short lesson description.</p>
-            <button>Begin</button>
+            <a href ="pages/lesson3.php"><button>Begin</button></a>
         </div>
     </div>
     </div>
@@ -94,8 +95,6 @@
     </div>
     
 -->
-    <footer>
-        <div class="bigRect"></div>
-    </footer>
+    
 
 <?php include "foot.php" ?>

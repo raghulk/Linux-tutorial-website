@@ -76,6 +76,7 @@ tr:nth-child(even){
     background-color: white;
 }/* end of table */
 /* footer */
+/*
 .footer{
     background-color: #107e7d;
     width:auto;
@@ -88,7 +89,8 @@ tr:nth-child(even){
     width:50%;
     height:40%;
     margin:5% auto;
-}/* end of footer */
+}  
+*/
 
 /* left side */
 /* .left-side{
