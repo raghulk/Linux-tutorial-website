@@ -1,0 +1,43 @@
+/* Space for content */
+.contentSpace {
+	padding: 50px;
+}
+
+/* Centered text for weather */
+.center {
+	text-align: center;
+	font-size: 14px;
+}
+
+/* Container for survey */
+.survey {
+	text-align: center;
+}
+
+/* Add margin for an input group (text and input) */
+.input_group {
+	margin-bottom: 16px;
+}
+
+/* Add red color, bold, and margin to the warning message */
+.warning_message {
+	color: #e60000;
+	margin-bottom: 16px;
+	font-weight: bold;
+}
+
+/* Add styling to button and submit types for input */
+input[type="submit"], input[type="button"] {
+	font-size: 1.25rem;
+}
+
+/* Add styling to survey thank you message */
+.survey_message {
+	font-size: 30px;
+}
+
+/* Position the navbar container inside the image */
+.container {
+	width: 100%;
+	text-align: right;
+}

@@ -1,7 +1,7 @@
 #wrapper{
     width:70vw;
     margin:0 auto 3em auto;
-    
+
 }
 
 #about-h1{
@@ -34,27 +34,3 @@ p {
     padding: .2em;
     padding-left: .5em;
   }
-
-/*
-footer {
-  background-color: #107E7D;
-  position:absolute;
-  bottom:0;
-  width:100%;
-}
-*/
-
-.bigRect {
-  border: 2px solid white;
-  width: 60%;
-  height: 18em;
-  display: inline-block;
-  margin-top: 3em;
-  margin-left: 16em;
-}
-
-.above {
-  position: absolute;
-  top: -103%;
-  left: 60%; 
-}
