@@ -81,3 +81,9 @@ function validateTeacher(){
     console.log("email validated as " + valid);
     return (valid);
 }
+
+document.getElementById("change").addEventListener("click",()=>{
+    document.getElementById("changeEmail").style.display = "block";
+    console.log("clicked");
+    
+})

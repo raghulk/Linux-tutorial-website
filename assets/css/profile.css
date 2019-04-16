@@ -1,0 +1,79 @@
+#profile-wrap{
+    width:60vw;
+    margin:2em auto;
+    color:white;
+    background-color:#044B7F;
+    border-radius:10px;
+    padding:1em;
+}
+
+hr{
+    color:white;
+}
+
+h1, h4, h5, p{
+    color:white;
+} 
+
+h1{
+    text-align: center;
+}
+
+#profile-cont{
+    width:70%;
+    margin:0 auto;
+}
+
+#change{
+    color:#0099CC;
+    margin-left:3em;
+    padding-left:0;
+}
+
+
+.title{
+    color:#f4954e;
+}
+
+#changeEmail{
+    display:none;
+    margin-left:3em;
+}
+
+#email, h1{
+    margin-bottom:.1em;
+}
+
+#change{
+    padding-top:.3em;
+    text-decoration: underline;
+}
+
+#note{
+    padding-top:.3em;
+}
+
+input[type='submit']{
+    background-color:#0099CC;
+    color:white;
+    border:none;
+    border-radius: .8em;
+    font-size:1em;
+    padding:.5em .75em;
+    display:block;
+}
+
+#out{
+    color:white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:500px){
+    #profile-cont{
+        width:auto;
+    }
+    
+    #changeEmail{
+        margin-left:0;
+    }
+}
