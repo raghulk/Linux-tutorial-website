@@ -25,15 +25,14 @@ if(!empty($_POST['name']) && !empty($_POST['pass']) ){
 		//store results
 		$stmt->bind_result($res);
 		$stmt->fetch();
-
+        //if password matches, login true 
 		if (password_verify($_POST['pass'], $res)) {
 			$_SESSION['login']=true;
 			$_SESSION['name']=$_POST['name'];
 			header("Location: ../index.php");
             //echo "logged in";
 		} else{
-            //echo "failed";
-            $error = "**Wrong username or password.**";
+            $error = "Wrong username or password.";
         }
 
 		$stmt->close();

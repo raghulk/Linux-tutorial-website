@@ -1,4 +1,11 @@
 <?php 
+
+session_start();
+session_name("login");
+if($_SESSION['login'] != true){
+    header("Location: login.php");
+}
+
     $title = "Quiz 3";
     $content ="Unix Quiz 3";
     $filename = "quiz3.php";

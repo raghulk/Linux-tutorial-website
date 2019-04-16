@@ -1,5 +1,7 @@
 <?php 
-    session_start();
+session_start();
+session_name("login");
+
     $title = "Lessons and Quizzes";
     $content ="Basecamp Unix Lessons and Quizzes";
     $filename = "directory.php";

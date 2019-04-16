@@ -1,5 +1,7 @@
 <?php 
-    session_start();
+session_start();
+session_name("login");
+
     $title = "Glossary";
     $content ="content";
     $filename = "glossary.php";

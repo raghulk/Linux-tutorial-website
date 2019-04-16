@@ -1,5 +1,7 @@
 <?php 
-        
+session_start();
+session_name("login");    
+
     $title = "Login";
     $content ="Login";
     $prefix ="../"; 
@@ -7,7 +9,7 @@
     $styleFile ="login.css";
     $script ="login.js";
 
-    
+    $error = "";
     //check if passwords match
     function passMatch(){
         if(strcmp($_POST['pass'], $_POST['pass2']) ==0){
@@ -23,18 +25,36 @@ if(!empty($_POST)){
     if ($_POST['name']!='' && $_POST['pass']!='' && $_POST['pass2']!='' && passMatch()){
         include $prefix."../../../dbConnect.inc";
         
-        //prepare
-        $stmt = $mysqli->prepare("INSERT INTO Login (Username, Password) VALUES (?,?)");
+        $stmt=$mysqli->prepare("SELECT Password FROM Login WHERE Username=?");
+		//bind
+		$stmt->bind_param("s",$_POST['name']);
+		//execute
+		$stmt->execute();
+		//store results
+		$stmt->bind_result($res);
+		$stmt->fetch();
+        //if password matches, login true 
+		if ($res) {
+			$error = "**This username is already taken.**";
+            header("Location: register.php?error=$error");
+		} else{
+            //prepare
+            $stmt = $mysqli->prepare("INSERT INTO Login (Username, Password) VALUES (?,?)");
+
+            $passHash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+            //bind
+            $stmt -> bind_param("ss",$_POST['name'],$passHash);
+            //execute and close
+            $stmt -> execute();
+            $stmt -> close();
+
+            //redirect to login page
+            header('Location: login.php');
+            
+            
+        }
         
-        $passHash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-        //bind
-        $stmt -> bind_param("ss",$_POST['name'],$passHash);
-        //execute and close
-        $stmt -> execute();
-        $stmt -> close();
         
-        //redirect to login page
-        header('Location: login.php');
     }
 
 
@@ -55,7 +75,7 @@ include "../head.php";
         <label for ="pass">Password: </label><input id ="pass" type = "password" name = "pass" placeholder = "Password"><br>
         
         <label for ="pass2">Password (re-enter): </label><input id ="pass2" type = "password" name = "pass2" placeholder = "Password (re-enter)"><br>
-        <p id ="error-login"></p><!-- show any error w/login -->
+        <p id ="error-login"><?php echo $_GET['error'];?></p><!-- show any error w/login -->
         
         <div id ="register-btns">
 <!--            <input type ="reset" value ="Reset Form" id ="reset-btn">-->

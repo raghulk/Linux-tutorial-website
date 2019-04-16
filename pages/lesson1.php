@@ -1,4 +1,7 @@
 <?php 
+session_start();
+session_name("login");
+
     $title = "Lesson 1";
     $content ="Unix Lesson 1";
     $filename = "lesson1.php";
