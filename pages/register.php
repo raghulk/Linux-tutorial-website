@@ -75,7 +75,7 @@ include "../head.php";
         <label for ="pass">Password: </label><input id ="pass" type = "password" name = "pass" placeholder = "Password"><br>
         
         <label for ="pass2">Password (re-enter): </label><input id ="pass2" type = "password" name = "pass2" placeholder = "Password (re-enter)"><br>
-        <p id ="error-login"><?php echo $_GET['error'];?></p><!-- show any error w/login -->
+        <p id ="error-login"><?php if(isset($_GET['error'])){echo $_GET['error'];}?></p><!-- show any error w/login -->
         
         <div id ="register-btns">
 <!--            <input type ="reset" value ="Reset Form" id ="reset-btn">-->

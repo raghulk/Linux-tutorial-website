@@ -62,3 +62,22 @@ function validateForm(){
     return (vName && vPass && match);
     
 }
+
+function validateTeacher(){
+    let valid = null;
+    var field = document.getElementById("t-email");
+    
+    //change style if no value 
+    if (field.value==""){
+        field.style.border = "2px solid red";
+        field.style.backgroundColor = "pink";
+        valid = false;
+    } else {
+        //reset style if value present
+        field.style.border ="2px solid #78a347";
+        field.style.backgroundColor ="white";
+        valid =true;
+    }
+    console.log("email validated as " + valid);
+    return (valid);
+}

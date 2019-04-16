@@ -12,13 +12,13 @@
     $filename = "profile.php";
     $prefix ="../"; 
     $styleFile ="style2.css";
-    $script ="pageScript.js";
+    $script ="login.js";
 
     if(!empty($_POST['t-email'])){
         require $prefix.'../../../dbConnect.inc';
-        $stmt=$mysqli->prepare("INSERT INTO Login (teacher) VALUES (?)");
+        $stmt=$mysqli->prepare("UPDATE Login SET teacher = ? WHERE Username =?");
 		//bind
-		$stmt->bind_param("s",$_POST['t-email']);
+		$stmt->bind_param("ss",$_POST['t-email'],$_SESSION['name']);
 		//execute
 		$stmt->execute();
         
@@ -37,9 +37,10 @@
     <h4>Your name:<?php echo $_SESSION['name'];?></h4>
     <?php 
         if (!isset($_SESSION['teacher-email'])){
-            echo '<form action ="<?php echo $_SERVER[\'PHP_SELF\']; ?>" method ="POST">
+            echo '<form action ='.$_SERVER["PHP_SELF"].' method ="POST" onsubmit = "return validateTeacher();">
             <label for ="t-email">Teacher\'s email: </label><input id ="t-email" type ="email" name = "t-email" placeholder = "Your teacher\'s email"><br>
             <p>If you enter a teacher\'s email, they will be notified of your score when you complete a quiz.</p>
+            <input type = "submit">
             </form>';
         } else{
             echo '<h4>Teacher\'s email:'.$_SESSION['teacher-email'].'<h4>';
