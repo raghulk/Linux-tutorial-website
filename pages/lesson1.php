@@ -43,7 +43,7 @@ A single . is a reference to where you are.<br><br>
         </div> <!-- end of lesson -->
         <div class ="quiz">
             <h5>Ready to begin the quiz?</h5>
-            <button id ="quiz-btn" type="button"><a href="#">Quiz 1</a></button>
+            <button id ="quiz-btn" type="button"><a href="quiz1.php">Quiz 1</a></button>
         </div> <!-- end of quiz -->
     </div> <!-- end of content -->
     </div> <!-- end of right column -->

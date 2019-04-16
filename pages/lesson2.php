@@ -24,7 +24,7 @@ session_name("login");
         </div> <!-- end of lesson -->
         <div class ="quiz">
             <h5>Ready to begin the quiz?</h5>
-            <button id ="quiz-btn" type="button"><a href="#">Quiz 1</a></button>
+            <button id ="quiz-btn" type="button"><a href="quiz2.php">Quiz 2</a></button>
         </div> <!-- end of quiz -->
     </div> <!-- end of content -->
     </div> <!-- end of right column -->
