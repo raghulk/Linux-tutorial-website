@@ -33,21 +33,14 @@ session_name("login");
     <h3 class ="subheading-h3">Contact (h3)</h3>
 
     <div class = "contactComment">
-    <p>Name (name@email)</p>
-    <p>Name (name@email)</p>
-    <p>Name (name@email)</p>
-    <p>Name (name@email)</p>
-    <p>Name (name@email)</p>
-    <p>Name (name@email)</p>
+    <p>Tariq Afoke tba8537@rit.edu</p>
+    <p>Arber Deski ad9238@rit.edu</p>
+    <p>Raghul Krishnan rk2384@rit.edu</p>
+    <p>Christine McCullough cxm1880@rit.edu</p>
+    <p>Christopher St Denny crs2417@rit.edu</p>
+    <p>WeiBin Yang wy9077@rit.edu</p>
    </div>
  </div>
-
-<!--
-   <footer>
-     <img class="above" src="../assets/images/aboveFooter.png" alt="Logo">
-     <div class="bigRect"></div>
-   </footer>
--->
 
 
 <?php include "../foot.php"; ?>
