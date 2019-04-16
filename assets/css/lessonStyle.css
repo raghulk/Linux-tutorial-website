@@ -54,6 +54,8 @@ h1 {
 	border-width:.2em;
 	min-height:70vh;
     border-bottom:none;
+    max-height:85vh;
+    overflow:scroll;
 }
 .quiz {
 	border-style: solid;

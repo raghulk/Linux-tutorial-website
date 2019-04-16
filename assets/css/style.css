@@ -71,7 +71,12 @@ pre{
     padding:.5em;
     padding-left:2.5em;
     font-size:1.5em;
-    
+    font-family: 'Roboto Mono', monospace;
+}
+
+.cmd {
+    font-family: 'Roboto Mono', monospace;
+    color:#CE8147;
 }
 
 p{
