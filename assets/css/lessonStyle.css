@@ -113,3 +113,19 @@ button a{
 .last{
     border-bottom:3px solid #004B7F
 }
+
+.quiz-sec form{
+    width:80%;
+    margin:1em auto;
+}
+
+.quiz-sec form p{
+    padding-left:0;
+    font-size:1.2em;
+    padding-bottom:0;
+}
+
+.quiz-sec form input{
+    margin-left:2em;
+    margin-top:1em;
+}
