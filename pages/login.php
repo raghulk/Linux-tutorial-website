@@ -29,7 +29,7 @@ if(!empty($_POST['name']) && !empty($_POST['pass']) ){
 		if (password_verify($_POST['pass'], $res)) {
 			$_SESSION['login']=true;
 			$_SESSION['name']=$_POST['name'];
-			header("Location: ../index.php");
+			header("Location: profile.php");
             //echo "logged in";
 		} else{
             $error = "Wrong username or password.";

@@ -7,10 +7,10 @@
     <meta name = "description" content = "<?php echo $content ?>">
 <!--    comes up to root directory, then gets the style for the common elements across the site - headers, fonts, etc-->
     <link rel ="stylesheet" href ="<?php echo $prefix ?>assets/css/style.css">
-<!--    comes up to root, then gets any style file unique to a page or group of pages (set this file name at top of document)-->
-    <link rel = "stylesheet" href ="<?php echo $prefix ?>assets/css/<?php echo $styleFile ?>">
     <!-- common mobile responsive css -->
     <link rel = "stylesheet" href ="<?php echo $prefix ?>assets/css/mobile-responsive.css">
+    <!--    comes up to root, then gets any style file unique to a page or group of pages (set this file name at top of document)-->
+    <link rel = "stylesheet" href ="<?php echo $prefix ?>assets/css/<?php echo $styleFile ?>">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
     <!-- js script for mobile responsive, code for mobile touch listener -->
     <script src="<?php echo $prefix?>assets/js/mobile-responsive-touch.js"></script>

@@ -68,6 +68,10 @@ input[type='submit']{
     text-decoration: none;
 }
 
+.quiz-record a{
+    color:#0099CC;
+}
+
 @media only screen and (max-width:500px){
     #profile-cont{
         width:auto;

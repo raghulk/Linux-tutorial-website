@@ -14,20 +14,47 @@
     $styleFile ="profile.css";
     $script ="login.js";
 
-    if(!empty($_POST['t-email'])){
-        require $prefix.'../../../dbConnect.inc';
-        $stmt=$mysqli->prepare("UPDATE Login SET teacher = ? WHERE Username =?");
-		//bind
-		$stmt->bind_param("ss",$_POST['t-email'],$_SESSION['name']);
-		//execute
-		$stmt->execute();
-        
-        $_SESSION['teacher-email']=$_POST['t-email'];
-    }
+    require $prefix.'../../../dbConnect.inc';
 
     //get quiz scores
     if ($mysqli) {
-    $sql = "select LessonID, Score from UserScore where Username =".$_SESSION['name'].";";
+        
+        $sql = 'select teacher from Login WHERE Username ="'.$_SESSION['name'].'"';
+
+        $res=$mysqli->query($sql);
+
+        if($res){
+            while($rowHolder = $res->fetch_assoc()){
+                $teacher = $rowHolder;
+            }
+        }
+    }
+
+    //if there's no teacher email in database 
+    // OR if there's a teacher email entered in post
+    // update record in database 
+    if (empty($teacher['teacher']) || !empty($_POST['t-email'])){
+            require $prefix.'../../../dbConnect.inc';
+            $stmt=$mysqli->prepare("UPDATE Login SET teacher = ? WHERE Username =?");
+            //bind
+            $stmt->bind_param("ss",$_POST['t-email'],$_SESSION['name']);
+            //execute
+            $stmt->execute();
+
+            //session set to newly entered email
+            $_SESSION['teacher-email']=$_POST['t-email'];
+        
+    } else {
+        //session set to what's in database
+        $_SESSION['teacher-email'] = $teacher['teacher'];
+    }
+
+    
+
+    //get quiz scores
+    if ($mysqli) {
+        
+        $sql = 'select LessonID, Score from UserScore WHERE Username ="'.$_SESSION['name'].'"';
 
         $res=$mysqli->query($sql);
 
@@ -37,6 +64,29 @@
             }
         }
     }
+
+    //var_dump($quizScore);
+
+    //scores for each lesson
+    $score1 = "N/A";
+    $score2 = "N/A";
+    $score3 = "N/A";
+
+    //sort scores into appropriate lesson variables 
+    if(isset($quizScore)){
+        foreach($quizScore as $score){
+            if($score['LessonID']==1){
+                $score1 =$score['Score'];
+            } else if ($score['LessonID']==2){
+                $score2 =$score['Score'];
+            }else if ($score['LessonID']==3){
+                $score3 =$score['Score'];
+            }
+        }
+    }
+
+    
+    
 
     include "../head.php";
         
@@ -64,9 +114,20 @@
         <div id = "records">
         <h4>Quiz Records</h4>
             <p id ="note">Note: only your most recent score is saved.</p>
-            <h5 class ="quiz-record"><span class ="title">Quiz 1:</span>&emsp;</h5>
-            <h5 class ="quiz-record"><span class ="title">Quiz 2:</span>&emsp;</h5>
-            <h5 class ="quiz-record"><span class ="title">Quiz 3:</span>&emsp;</h5>
+            <h5 class ="quiz-record"><span class ="title">Quiz 1:</span>&emsp;<?php 
+                //check if score is in database; show if it is
+                if($score1 =="N/A"){echo "You haven't taken this quiz yet! Start it <a class = 'quizLink' href ='quiz1.php'>here.</a>";
+                } else{
+                    echo "<span class ='score'>".$score1."/5</span>";
+                } ?></h5>
+            <h5 class ="quiz-record"><span class ="title">Quiz 2:</span>&emsp;<?php if ($score2 =="N/A"){echo "You haven't taken this quiz yet! Start it <a class = 'quizLink' href ='quiz2.php'>here.</a>";
+                } else{
+                    echo "<span class ='score'>".$score2."/5</span>";
+                } ?></h5>
+            <h5 class ="quiz-record"><span class ="title">Quiz 3:</span>&emsp;<?php if ($score3 =="N/A"){echo "You haven't taken this quiz yet! Start it <a class = 'quizLink' href ='quiz3.php'>here.</a>";
+                } else{
+                    echo "<span class ='score'>".$score2."/5</span>";
+                } ?></h5>
         </div>
 
         <button><a id ="out" href ="logout.php">Logout</a></button>    
