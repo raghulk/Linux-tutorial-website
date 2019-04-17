@@ -3,15 +3,18 @@
 	padding: 50px;
 }
 
-/* Centered text for weather */
 .center {
 	text-align: center;
-	font-size: 14px;
 }
 
 /* Container for survey */
 .survey {
-	text-align: center;
+	width:40%;
+    margin:0 auto;
+    border: 3px solid #044B7F;
+    border-radius:15px;
+    padding:2em;
+    padding-bottom:4em;
 }
 
 /* Add margin for an input group (text and input) */
@@ -28,7 +31,20 @@
 
 /* Add styling to button and submit types for input */
 input[type="submit"], input[type="button"] {
-	font-size: 1.25rem;
+	 background-color:#0099CC;
+    color:white;
+    border:none;
+    border-radius: .8em;
+    font-size:1em;
+    padding:.5em .75em;
+    display:block;
+    float:left;
+    margin-left:3em;
+    margin-bottom:2em;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover{
+    background-color:#044B7F;
 }
 
 /* Add styling to survey thank you message */

@@ -11,6 +11,7 @@ hr{
     color:white;
 }
 
+/* Change styles to be on dark background*/
 h1, h4, h5, p{
     color:white;
 } 
@@ -24,16 +25,11 @@ h1{
     margin:0 auto;
 }
 
-#change{
-    color:#0099CC;
-    margin-left:3em;
-    padding-left:0;
-}
-
-
 .title{
     color:#f4954e;
 }
+
+/* Change email box */
 
 #changeEmail{
     display:none;
@@ -45,6 +41,9 @@ h1{
 }
 
 #change{
+    color:#0099CC;
+    margin-left:3em;
+    padding-left:0;
     padding-top:.3em;
     text-decoration: underline;
 }
@@ -53,6 +52,7 @@ h1{
     padding-top:.3em;
 }
 
+/* submit styled like button*/
 input[type='submit']{
     background-color:#0099CC;
     color:white;
@@ -71,6 +71,8 @@ input[type='submit']{
 .quiz-record a{
     color:#0099CC;
 }
+
+
 
 @media only screen and (max-width:500px){
     #profile-cont{

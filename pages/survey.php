@@ -14,7 +14,7 @@ session_name("login");
 ?>
 
 <!-- Title -->
-<h1>Weclome to survey</h1>
+<h1 class ="center">Survey</h1>
 
 <!-- Content -->
 
@@ -34,12 +34,12 @@ if (isset($_POST['submit'])) {
     <div class="warning_message" id="warning_message"></div>
 
     <div class="input_group">
-      <span id="test_amount_text">How many did you take? (*)</span>
+      <span id="test_amount_text">How many quizzes did you take? (*)</span>
       <input type="number" name="test_amount" id="test_amount" />
     </div>
 
     <div class="input_group">
-      <span id="visit_date_text">When did you take? (*)</span>
+      <span id="visit_date_text">When did you finish them? (*)</span>
       <input type="date" name="visit_date" id="visit_date" />
     </div>
 
@@ -50,14 +50,14 @@ if (isset($_POST['submit'])) {
     </div>
 
     <div class="input_group">
-      <span id="rate_text">How hard quiz is? (1 - 10):</span>
+      <span id="rate_text">How hard were the quizzes, on average? (1 - 10):</span>
       <input type="range" name="rate" id="rate_quiz" min="1" max="10" />
     </div>
 
 
     <div class="input_group">
       <span id="comments_text"></span>
-      <textarea rows="6" cols="60" name="comment" id="comments">Feedback...</textarea>
+      <textarea rows="6" cols="60" name="comment" id="comments">Any other comments?</textarea>
     </div>
 
     <div class="input_group">
