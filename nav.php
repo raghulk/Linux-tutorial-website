@@ -6,8 +6,8 @@ $login ='<li><a href ="'.$prefix.'pages/login.php">Login</a></li>';
 $loginMobile ='<a href ="'.$prefix.'pages/login.php">Login</a>';
 if(!empty($_SESSION)){
     if (session_status()==PHP_SESSION_ACTIVE){
-        $login ="<li><a href ='".$prefix."pages/logout.php'>Hi, ".$_SESSION['name']."! ( Logout)</a></li>";
-        $loginMobile ="<a href ='".$prefix."pages/logout.php'>Hi, ".$_SESSION['name']."! ( Logout)</a>";
+        $login ="<li><a href ='".$prefix."pages/profile.php'>Hi, ".$_SESSION['name']."!</a></li>";
+        $loginMobile ="<a href ='".$prefix."pages/profile.php'>Hi, ".$_SESSION['name']."!</a>";
     }
 }
 ?>
