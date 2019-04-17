@@ -47,6 +47,13 @@ input[type="submit"]:hover, input[type="button"]:hover{
     background-color:#044B7F;
 }
 
+input, textarea{
+    border: 2px solid #044B7F;
+    padding:.5em;
+}
+
+
+
 /* Add styling to survey thank you message */
 .survey_message {
 	font-size: 30px;
