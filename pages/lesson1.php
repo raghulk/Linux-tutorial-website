@@ -13,7 +13,7 @@ session_name("login");
 ?>
 
 <div id ="lesson-wrap">
-    <?php include"../assets/includes/sideMenu.php"; ?>
+    <?php include "../assets/includes/sideMenu.php"; ?>
     <div id="rightColumn"> 
     <div class="content" >
         <h1> Lesson 1 </h1>
