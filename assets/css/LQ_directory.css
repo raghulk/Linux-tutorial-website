@@ -1,8 +1,12 @@
+/*CSS for lessons and quizzes directory page 
+Christine McCullough */
+
 #LQ-wrap{
     width:70vw;
     margin:0 auto;
 }
 
+/* Grid system to hold the cards*/
 #lessons-dir, #quizzes-dir{
     width:90%;
     margin:2em auto;
@@ -23,6 +27,7 @@
     width:35vw;
 }
 
+/*Positioning on grid*/
 #l1, #q1{
     grid-column:1/2;
 }
@@ -47,6 +52,7 @@
     color:white;
 }
 
+/* Holds little vector graphics*/
 .icon-holder{
     height:5em;
     width:5em;
@@ -74,6 +80,8 @@
 #LQ-wrap p{
     height:6em;
 }
+
+/*Restyle buttons to be on blue background*/
 
 #lessons-dir button{
     background-color:white;
@@ -109,6 +117,7 @@
     #lessons-dir, #quizzes-dir{
         grid-template-columns:1fr;
         grid-template-rows: 10em 10em 10em;
+        grid-row-gap:1em;
     }
     
     #l1, #l2, #l3, #q1, #q2, #q3{

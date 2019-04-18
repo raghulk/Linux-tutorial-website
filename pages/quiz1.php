@@ -92,6 +92,7 @@ $answers =[$a1, $a2, $a3, $a4, $a5];
 //@param $quest = question array holding question and ID 
 //@param $aSet = answer array holding all answers and their values
 //@param num = number of of question in page for IDs and names 
+//returns HTML block
 function buildQuestion($quest, $aSet, $num){
     $qText = $quest['Question'];
     $an1 = [$aSet[0]['AnswerText'],$aSet[0]['Correct']];
