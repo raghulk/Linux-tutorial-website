@@ -64,19 +64,19 @@
         <div id ="l1" class ="lesson-card">
             <div class ="icon-holder"><img src ="assets/images/monitor_DkBl.png"></div>
             <h4>Lesson One</h4>
-            <p>A very short lesson description.</p>
+            <p>Basic Unix commands and navigation</p>
             <a href ="pages/lesson1.php"><button>Begin</button></a>
         </div>
         <div id ="l2" class ="lesson-card">
             <div class ="icon-holder"><img src ="assets/images/cp_DkBl.png"></div>
             <h4>Lesson Two</h4>
-            <p>A very short lesson description.</p>
+            <p>Creating, editing, and protecting files</p>
             <a href ="pages/lesson2.php"><button>Begin</button></a>
         </div>
         <div id ="l3" class ="lesson-card">
             <div class ="icon-holder"><img src ="assets/images/up_DkBl.png"></div>
             <h4>Lesson Three</h4>
-            <p>A very short lesson description.</p>
+            <p>Sorting, searching, and reading from files</p>
             <a href ="pages/lesson3.php"><button>Begin</button></a>
         </div>
     </div>

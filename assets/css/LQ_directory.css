@@ -112,6 +112,7 @@ Christine McCullough */
     
     #LQ-wrap p{
         height:auto;
+        text-align:center;
     }
     
     #lessons-dir, #quizzes-dir{
@@ -132,6 +133,7 @@ Christine McCullough */
     .lesson-card, .quiz-card{
         height:10em;
     }
+
     
     .lesson-card h4{
         padding-right:3em;
