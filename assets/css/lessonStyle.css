@@ -61,7 +61,7 @@ h1 {
 	border-style: solid;
 	border-color:#004B7F;
 	border-width:.2em;
-	height:15vh;
+	/* height:15vh; */
 }
 .quiz h5 {
 	text-align:center;
@@ -72,16 +72,16 @@ h1 {
 }
 
 #quiz-btn{
-    margin-top:1em;
+    margin-bottom:1em;
 }
 
-/*
-button {
+
+/* button {
 height:2em;
 border-radius:60%;
 background-color:#004B7F;
 font:#FFFFFF
-}*/
+} */
 
 .sideMenu button a {
 	color:#107E7D;
