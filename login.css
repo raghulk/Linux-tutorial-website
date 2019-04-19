@@ -1,0 +1,57 @@
+.login{
+    width:40vw;
+    margin:3em auto;
+    padding:1em 2em;
+    background-color:#0099CC;
+    border-radius:20px;
+    color:white;
+}
+
+.login h3{
+    text-align: center;
+    color:white;
+    border-bottom:2px solid white;
+    margin-bottom:1em;
+}
+
+label[for="pass2"]{
+    margin-top:2em;
+}
+
+label{
+    margin-left:3em;
+    margin-bottom:.5em;
+}
+
+.login input {
+    background-color:white;
+    color:#044B7F;
+    border:none;
+    border-radius: .8em;
+    font-size:1.25em;
+    padding:.5em .75em;
+    display:block;
+    margin: .3em auto;
+    width:60%;
+}
+
+.login input[type=submit] {
+    background-color:#044B7F;
+    color:white;
+}
+
+#register-link p{
+    text-align:right;
+}
+
+#register-link a{
+    color:white;
+}
+
+#reset-btn{
+    float:left;
+}
+
+#error-div{
+    font-size:2em;
+}
