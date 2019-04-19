@@ -1,36 +1,36 @@
 #wrapper{
-    width:70vw;
-    margin:0 auto 3em auto;
+  width:70vw;
+  margin:0 auto 3em auto;
 
 }
 
 #about-h1{
-    margin-left:0;
-    border-bottom:2px solid #044B7F;
-    width:35vw;
+  margin-left:0;
+  border-bottom:2px solid #044B7F;
+  width:35vw;
 }
 
 h3.subheading-h3{
-    padding-left: 16px;
+  padding-left: 16px;
 }
 
 
 .boxComment{
-  width: 700px;
+width: 90%;
+border: 2px solid #044B7F;
+position: relative;
+left: 5%;
+}
+.contactComment{
+  width: 80%;
   border: 2px solid #044B7F;
   position: relative;
   left: 5%;
 }
-.contactComment{
-    width: 400px;
-    border: 2px solid #044B7F;
-    position: relative;
-    left: 5%;
-  }
 
 
 
 p {
-    padding: .2em;
-    padding-left: .5em;
-  }
+  padding: .2em;
+  padding-left: .5em;
+}
