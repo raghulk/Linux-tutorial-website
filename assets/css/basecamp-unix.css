@@ -1,263 +1,263 @@
 header{
-    position: sticky;
-    background-color: #107E7D;
+  position: sticky;
+  background-color: #107e7d;
 }
 
 body {
-    background-color: #ECEFEF;
-    margin: 0;
+  background-color: #ECEFEF;
+  margin: 0;
 }
 
 #navLogo img{
-    float: left;
-    width: 6%;
-    margin-left: 2em;
+  float: left;
+  width: 6%;
+  margin-left: 2em;
 }
 
 #mainLogo img{
-    width: 30%;
-    margin:1em auto;
-    display: block;
+  width: 30%;
+  margin:1em auto;
+  display: block;
 }
 
 #home-img img{
-    float: right;
-    margin-right: 5em;
-    width: 31%;
-    border:4px solid #0099CC;
+  float: right;
+  margin-right: 5em;
+  width: 31%;
+  border:4px solid #0099CC;
 }
 
 #homeRect {
-  border: 4px solid white;
-    background-color:#044B7F;
-  font-size: 30px;
-  color: white;
-  padding: 10px;
-  margin: auto;
-  width: 85%;
-    text-align: center;
+border: 4px solid white;
+  background-color:#044B7F;
+font-size: 30px;
+color: white;
+padding: 10px;
+margin: auto;
+width: 85%;
+  text-align: center;
 }
 
 #homeRect p{
-    border:3px solid white;
+  border:3px solid white;
 }
 
 h1 {
-  border-bottom: 2px solid #0099CC;
-  color: #0099CC;
-  clear:both;
-  font-size: 20px;
-  margin: 1.5em;
-  display: block;
-  width: 45%;
+border-bottom: 2px solid #0099CC;
+color: #0099CC;
+clear:both;
+font-size: 20px;
+margin: 1.5em;
+display: block;
+width: 45%;
 }
 
 .head2 h1 {
-  color: #CE8147;
-  border-bottom: 2px solid #CE8147;
+color: #CE8147;
+border-bottom: 2px solid #CE8147;
 }
 
 .section {
-  margin: auto;
-  width: 60%;
-  margin-bottom: 3em;
-  float: right;
+margin: auto;
+width: 60%;
+margin-bottom: 3em;
+float: right;
 }
 
 .row{
-  margin-left: 7em;
+margin-left: 7em;
 }
 
 .icon-holder{
-    height:5em;
-    width:5em;
-    background-color:white;
-    border-radius:50%;
-    display:block;
-    margin:1em auto;
+  height:5em;
+  width:5em;
+  background-color:white;
+  border-radius:50%;
+  display:block;
+  margin:1em auto;
 }
 
 .icon-holder img{
-    max-width: 70%;
-    height:auto;
-    margin:18% 15%;
+  max-width: 70%;
+  height:auto;
+  margin:18% 15%;
 }
 
 
 .dot {
-  border-radius: 50%;
-  display: inline-block;
-  background-color: #0099CC;
-  margin-bottom: -1.6em;
-    margin-right:1em;
+border-radius: 50%;
+display: inline-block;
+background-color: #0099CC;
+margin-bottom: -1.6em;
+  margin-right:1em;
 }
 
 .smallRect {
-  border: 4px solid #0099CC;
-  color: #0099CC;
-  width: 70%;
-  margin-bottom: 1em;
-  padding: 1em;
-  display: inline-block;
+border: 4px solid #0099CC;
+color: #0099CC;
+width: 70%;
+margin-bottom: 1em;
+padding: 1em;
+display: inline-block;
 }
 
 #lessons-dir{
-    width:90%;
-    margin:2em auto;
-    display:grid;
-    grid-template-columns:1fr .3fr 1fr .3fr 1fr;
+  width:90%;
+  margin:2em auto;
+  display:grid;
+  grid-template-columns:1fr .3fr 1fr .3fr 1fr;
 }
 
 #lessons-h1{
-    margin-left:0;
-    border-bottom:2px solid #044B7F;
-    width:35vw;
+  margin-left:0;
+  border-bottom:2px solid #044B7F;
+  width:35vw;
 }
 
 #l1{
-    grid-column:1/2;
+  grid-column:1/2;
 }
 
 #l2{
-    grid-column:3/4;
+  grid-column:3/4;
 }
 
 #l3{
-    grid-column: 5/6;
+  grid-column: 5/6;
 }
 
 .lesson-card{
-    height:22em;
-    background-color:#044B7F;
-    color:white; 
+  height:22em;
+  background-color:#044B7F;
+  color:white; 
 }
 
 .lesson-card h4{
-    color:white;
-    text-align:center;
+  color:white;
+  text-align:center;
 }
 
 #lessons-dir button{
-    background-color:white;
-    color:#044B7F;
+  background-color:white;
+  color:#044B7F;
 }
 
 #lessons-dir button:hover{
-    background-color:#107E7D;
-    color:white;
+  background-color:#107E7D;
+  color:white;
 }
 
 #lessons-dir p{
-    height:6em;
-    text-align: center;
+  height:6em;
+  text-align: center;
 }
 
 .lesson-card a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card {
-  border: 4px solid #CE8147;
-  color: #CE8147;
-  height: 18em;
-  margin: auto auto 7.91em 6em;
-  width: 20%;
-  display: inline-block;
-  padding: 10px;
+border: 4px solid #CE8147;
+color: #CE8147;
+height: 18em;
+margin: auto auto 7.91em 6em;
+width: 20%;
+display: inline-block;
+padding: 10px;
 }
 
 .bigRect {
-  border: 4px solid white;
-  width: 60%;
-  height: 18em;
-  display: inline-block;
-  margin-top: 3em;
-  margin-left: 16em;
+border: 4px solid white;
+width: 60%;
+height: 18em;
+display: inline-block;
+margin-top: 3em;
+margin-left: 16em;
 }
 
-footer {
-  background-color: #107E7D;
-  height: 25em;
-}
+/* footer {
+background-color: #107E7D;
+height: 25em;
+} */
 
 @media only screen and (max-width:850px){
-    html{
-        overflow-x:hidden;
-    }
-    body{
-        width: 100vw;
-    }
-    
-    #cards p{
-        height:auto;
-    }
-    
-    #lessons-dir{
-        grid-template-columns:1fr;
-        grid-template-rows: 10em 10em 10em;
-        grid-row-gap:1em;
-    }
-    
-    #l1, #l2, #l3{
-        grid-column:1;
-    }
-    
-    .icon-holder{
-        margin:2.5em .5em;
-        float:left;
-    }
-    
-    .lesson-card{
-        height:10em;
-    }
-    
-    .lesson-card h4{
-        padding-right:3em;
-    }
-    
-    #cards button{
-        margin:0 46%;
-    }
-    
-    .icon-holder.dot{
-        display:none;
-    }
-    
-    .section{
-        width:100vw;
-        padding:1em;
-    }
-    
-    .row{
-        width:90vw;
-        margin:0 auto;
-    }
-    
-    .smallRect{
-        width:90%;
-        margin:0 auto;
-        display:block;
-    }
-    
-    #home-img img{
-        margin:0 auto;
-        float:none;
-        display:block;
-    }
+  html{
+      overflow-x:hidden;
+  }
+  body{
+      width: 100vw;
+  }
+  
+  #cards p{
+      height:auto;
+  }
+  
+  #lessons-dir{
+      grid-template-columns:1fr;
+      grid-template-rows: 10em 10em 10em;
+      grid-row-gap:1em;
+  }
+  
+  #l1, #l2, #l3{
+      grid-column:1;
+  }
+  
+  .icon-holder{
+      margin:2.5em .5em;
+      float:left;
+  }
+  
+  .lesson-card{
+      height:10em;
+  }
+  
+  .lesson-card h4{
+      padding-right:3em;
+  }
+  
+  #cards button{
+      margin:0 46%;
+  }
+  
+  .icon-holder.dot{
+      display:none;
+  }
+  
+  .section{
+      width:100vw;
+      padding:1em;
+  }
+  
+  .row{
+      width:90vw;
+      margin:0 auto;
+  }
+  
+  .smallRect{
+      width:90%;
+      margin:0 auto;
+      display:block;
+  }
+  
+  #home-img img{
+      margin:0 auto;
+      float:none;
+      display:block;
+  }
 }
 
 @media only screen and (max-width:500px){
 
-    
-    #LQ-wrap{
-        width:100vw;
-    }
-    
-    #lessons-dir, #quizzes-dir{
-        grid-template-rows:15em 15em 15em;
-    }
-    
-    .lesson-card, .quiz-card{
-        height:15em;
-    }
+  
+  #LQ-wrap{
+      width:100vw;
+  }
+  
+  #lessons-dir, #quizzes-dir{
+      grid-template-rows:15em 15em 15em;
+  }
+  
+  .lesson-card, .quiz-card{
+      height:15em;
+  }
 }
