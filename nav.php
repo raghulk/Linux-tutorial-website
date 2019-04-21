@@ -17,6 +17,8 @@ if(!empty($_SESSION)){
     <div class="screen-max-570">
         <ul>
             <?php echo $login; ?>
+            <li><a href ="<?php echo $prefix ?>pages/comments.php">Comments</a></li>
+            <li><a href ="<?php echo $prefix ?>pages/survey.php">Survey</a></li>
             <li><a href ="<?php echo $prefix ?>pages/glossary.php">Glossary</a></li>
             <li><a href ="<?php echo $prefix ?>pages/directory.php">Lessons and Quizzes</a></li>
             <li><a href ="<?php echo $prefix ?>pages/about.php">About</a></li>
@@ -36,8 +38,10 @@ if(!empty($_SESSION)){
                     <!-- .div menu -->
                     <div class="li">
                         <div><?php echo $loginMobile; ?></div>
-                        <div><a href ="<?php echo $prefix ?>pages/glossary.php">Glossary</a></div>
                         <div><a href ="<?php echo $prefix ?>pages/directory.php">Lessons and Quizzes</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/glossary.php">Glossary</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/survey.php">Survey</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/comments.php">Comments</a></div>
                         <div><a href ="<?php echo $prefix ?>pages/about.php">About</a></div>
                     </div>
                 </div>

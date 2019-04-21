@@ -9,17 +9,26 @@
 
 /* Container for survey */
 .survey {
-	width:40%;
+	width:70%;
     margin:0 auto;
     border: 3px solid #044B7F;
     border-radius:15px;
     padding:2em;
-    padding-bottom:4em;
+    padding-bottom:0em;
 }
 
 /* Add margin for an input group (text and input) */
 .input_group {
-	margin-bottom: 16px;
+	display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.input_group1 {
+	display: flex;
+/*    margin-bottom: 16px;*/
+    align-items: center;
+    justify-content: center;
 }
 
 /* Add red color, bold, and margin to the warning message */
@@ -46,12 +55,18 @@ input[type="submit"], input[type="button"] {
 input[type="submit"]:hover, input[type="button"]:hover{
     background-color:#044B7F;
 }
-
+#rate{
+    margin-top: 1em;
+}
 input, textarea{
     border: 2px solid #044B7F;
     padding:.5em;
+    margin-left: 1em;
+    
 }
-
+input:focus, textarea:focus{
+    outline: none;
+}
 
 
 /* Add styling to survey thank you message */
@@ -63,4 +78,22 @@ input, textarea{
 .container {
 	width: 100%;
 	text-align: right;
+}
+.astric{
+    color: red;
+    font-size: 14px;
+    position: relative;
+    bottom: 5px;
+    left: 2px;
+}
+textarea{
+    width: 60%;
+}
+@media screen and (max-width:530px){
+    .survey{
+        width: 95%;
+        border: none;
+        margin: 0 !important;
+        padding: 2em 0 0em .5em !important;
+    }
 }
