@@ -4,7 +4,7 @@ session_name("login");
 
     $title = "Survey";
     $content ="content";
-    $filename = "about.php";
+    $filename = "survey.php";
     $prefix ="../";
     $styleFile ="survey.css";
     $script ="survey.js";
