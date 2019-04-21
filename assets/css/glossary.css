@@ -6,37 +6,6 @@ body{
     grid-template-columns: 70% 30%; */
     /* height:1000px; */
 }
-/* .right_side{
-    grid-column: 1;
-}
-.left_side{
-     border:1px solid black;
-    grid-column: 2;
-}  */
-/* header{
-    position:sticky;
-    z-index: 1;
-    background-color: #107e7d;
-    height:70px;
-} */
-/* nav{
-    
-    position: relative;
-    top:25%;
-    width:320px;
-    float:right;
-} */
-/* nav a{
-    text-decoration: none;
-    color:white;
-    
-}
-nav a:not(:last-child){
-    border-right:1px solid white;
-    padding-right:8px;
-} */
-                                                    /* body part */
-/* right side */
 .body_title{
     margin:6%;
 }
@@ -74,54 +43,19 @@ tr:nth-child(odd):not(:first-child){
 }
 tr:nth-child(even){
     background-color: white;
-}/* end of table */
-/* footer */
-/*
-.footer{
-    background-color: #107e7d;
-    width:auto;
-    height:250px;
-    position: relative;
-    border:1px solid #107e7d;
 }
-.footer-circle-outline{
-    border:1px solid black;
-    width:50%;
-    height:40%;
-    margin:5% auto;
-}  
-*/
-
-/* left side */
-/* .left-side{
-    margin:0 auto;
-    background-color: white;
+@media screen and (max-width:450px){
+    .body_title{
+        width: auto;
+        margin: 6% 1% !important;
+    }
+    .body_content{
+        margin: 0px !important;
+    }
 }
-.left-side-title-outline{
-    width:70%;
-    margin:0 auto;
+@media screen and (max-width:550px){
+    .body_content{
+        width: auto;
+        margin: 0px !important;
+    }
 }
-.left-side-title{
-    color:#0099cc;
-    width:80%;
-    margin:2% auto;
-}
-.left-side-content{
-    display: grid; 
-    grid-template-rows: auto auto;
-    grid-template-columns: 20% 80%; 
-    grid-row-gap:30%;
-} */
-
-
-/* span circle 1/2 */
-/* .circle{
-    width:25px;
-    height:25px;
-    border:1px solid red;
-    background-color: red;
-    color:white;
-    border-radius: 50%;
-    text-align: center;
-    margin:5% auto;
-} */
