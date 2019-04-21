@@ -16,12 +16,13 @@ if(!empty($_SESSION)){
     <a href ="<?php echo $prefix ?>index.php"><img src ="<?php echo $prefix ?>assets/images/AltLogo%20(translucent%20no-tag).png" alt ="Basecamp Unix Logo" title ="Basecamp Unix"></a>
     <div class="screen-max-570">
         <ul>
-            <?php echo $login; ?>
-            <li><a href ="<?php echo $prefix ?>pages/comments.php">Comments</a></li>
-            <li><a href ="<?php echo $prefix ?>pages/survey.php">Survey</a></li>
-            <li><a href ="<?php echo $prefix ?>pages/glossary.php">Glossary</a></li>
-            <li><a href ="<?php echo $prefix ?>pages/directory.php">Lessons and Quizzes</a></li>
-            <li><a href ="<?php echo $prefix ?>pages/about.php">About</a></li>
+<!--            <?php echo $login; ?>-->
+            <li><a href ="<?php echo $prefix ?>pages/login.php"<?php echo (isset($title) && $title=='Login') ? ' class="active"' : ''; ?>>Login</a></li>
+            <li><a href ="<?php echo $prefix ?>pages/comments.php"<?php echo (isset($title) && $title=='Comments') ? ' class="active"' : ''; ?>>Comments</a></li>
+            <li><a href ="<?php echo $prefix ?>pages/survey.php"<?php echo (isset($title) && $title=='Survey') ? ' class="active"' : ''; ?>>Survey</a></li>
+            <li><a href ="<?php echo $prefix ?>pages/glossary.php"<?php echo (isset($title) && $title=='Glossary') ? ' class="active"' : ''; ?>>Glossary</a></li>
+            <li><a href ="<?php echo $prefix ?>pages/directory.php"<?php echo (isset($title) && $title=='Lessons and Quizzes') ? ' class="active"' : ''; ?>>Lessons and Quizzes</a></li>
+            <li><a href ="<?php echo $prefix ?>pages/about.php"<?php echo (isset($title) && $title=='About') ? ' class="active"' : ''; ?>>About</a></li>
         </ul>
     </div>
     <div class="screen-min-570">
@@ -37,12 +38,12 @@ if(!empty($_SESSION)){
                     </div>
                     <!-- .div menu -->
                     <div class="li">
-                        <div><?php echo $loginMobile; ?></div>
-                        <div><a href ="<?php echo $prefix ?>pages/directory.php">Lessons and Quizzes</a></div>
-                        <div><a href ="<?php echo $prefix ?>pages/glossary.php">Glossary</a></div>
-                        <div><a href ="<?php echo $prefix ?>pages/survey.php">Survey</a></div>
-                        <div><a href ="<?php echo $prefix ?>pages/comments.php">Comments</a></div>
-                        <div><a href ="<?php echo $prefix ?>pages/about.php">About</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/login.php">Login</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/directory.php"<?php echo (isset($title) && $title=='Lessons and Quizzes') ? ' class="active"' : ''; ?>>Lessons and Quizzes</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/glossary.php"<?php echo (isset($title) && $title=='Glossary') ? ' class="active"' : ''; ?>>Glossary</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/survey.php"<?php echo (isset($title) && $title=='Survey') ? ' class="active"' : ''; ?>>Survey</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/comments.php"<?php echo (isset($title) && $title=='Comments') ? ' class="active"' : ''; ?>>Comments</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/about.php"<?php echo (isset($title) && $title=='About') ? ' class="active"' : ''; ?>>About</a></div>
                     </div>
                 </div>
             </div>

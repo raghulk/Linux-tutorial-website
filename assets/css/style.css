@@ -99,6 +99,10 @@ button:hover{
     background-color:rgb(182, 197, 197);
 }
 
+.active{
+  color: black!important;    
+}
+
 nav{
     margin:0;
     background-color:#107E7D;
@@ -135,7 +139,7 @@ nav li a:visited{
 }
 
 nav li a:hover{
-    color:#0099CC;
+    color:black;
 }
 /* .nav for screen min 570 */
 .nav a{
@@ -150,7 +154,7 @@ nav li a:hover{
     color:white;
 }
 .nav a:hover{
-    color:#0099CC;
+    color: black;
 }
 
 
