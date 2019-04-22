@@ -9,6 +9,7 @@
     <link rel ="stylesheet" href ="<?php echo $prefix ?>assets/css/style.css">
     <!-- common mobile responsive css -->
     <link rel = "stylesheet" href ="<?php echo $prefix ?>assets/css/mobile-responsive.css">
+    <link rel="shortcut icon" href="<?php echo $prefix ?>assets/images/favicon.ico" type="image/x-icon">
     <!--    comes up to root, then gets any style file unique to a page or group of pages (set this file name at top of document)-->
     <link rel = "stylesheet" href ="<?php echo $prefix ?>assets/css/<?php echo $styleFile ?>">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono" rel="stylesheet">

@@ -23,7 +23,7 @@ if($_POST){
     if($test_amount == ""){
         $return_info = array(
             'status' => "400",
-            'message' => "Enter the number of the quizzes did you take.*",
+            'message' => "Enter the number of the quizzes you took.*",
             'id' => "test_amount_text");
         returnInfoEncode($return_info);
         die();
@@ -32,7 +32,7 @@ if($_POST){
     elseif(!ctype_digit($test_amount) && !(int)$test_amount >= 0){
         $return_info = array(
             'status' => "400",
-            'message' => "Enter the valid number of the quizzes did you take.*",
+            'message' => "Enter the valid number of the quizzes you took.*",
             'id' => "test_amount_text");
         returnInfoEncode($return_info);
         die();
@@ -41,7 +41,7 @@ if($_POST){
     if (!preg_match('([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))', $complete_date)) {
         $return_info = array(
             'status' => "400",
-            'message' => "Enter the valid date.*",
+            'message' => "Enter a valid date.*",
             'id' => "complete_date_text");
         returnInfoEncode($return_info);
         die();
@@ -66,7 +66,7 @@ if($_POST){
     elseif(!ctype_digit($rate)){
         $return_info = array(
             'status' => "400",
-            'message' => "Enter the valid website rating.*",
+            'message' => "Enter a valid website rating.*",
             'id' => "rate_text");
         returnInfoEncode($return_info);
         die();
@@ -82,7 +82,7 @@ if($_POST){
     elseif(!ctype_digit($rate)){
         $return_info = array(
             'status' => "400",
-            'message' => "Enter the valid quizzes rating*",
+            'message' => "Enter a valid quizzes rating*",
             'id' => "rate_text");
         returnInfoEncode($return_info);
         die();
@@ -103,6 +103,6 @@ if($_POST){
 
     $return_info = array(
         'status' => "200",
-        'message' => "Thank you for submitting!");
+        'message' => "Your survey has been submitted successfully!");
     returnInfoEncode($return_info);
 }

@@ -18,12 +18,13 @@ function submitSurveyForm(e) {
             var obj = JSON.parse(http.responseText);
             if(obj.status == "200"){
                 clearRedColor();
+                document.getElementById("warning_message").innerText = "";
                 document.getElementById("survey_message").innerText = obj.message;
-                document.getElementById("survey").classList.add("survey");
+//                document.getElementById("survey").classList.add("survey");
 
                 setTimeout(function(){
                     location.reload();
-                }, 10000);
+                }, 2000);
             }
             else if(obj.status == "400"){
                 clearRedColor();

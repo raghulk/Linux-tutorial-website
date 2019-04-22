@@ -2,9 +2,9 @@
 session_start();
 session_name("login");
 
-    $title = "About";
+    $title = "Survey";
     $content ="content";
-    $filename = "about.php";
+    $filename = "survey.php";
     $prefix ="../";
     $styleFile ="survey.css";
     $script ="survey.js";
@@ -17,18 +17,18 @@ session_name("login");
 <h1 class ="center">Survey</h1>
 
 <!-- Content -->
-<div id = "survey"><span id="survey_message" class="survey_message"></span></div>
 <form action="" method="post" onsubmit="return submitSurveyForm(event)" name="survey_form">
   <div class="survey">
+<span id="survey_message" class="survey_message"></span>
     <div class="warning_message" id="warning_message"></div>
 
     <div class="input_group">
-      <span id="test_amount_text">How many quizzes did you take? (*)</span>
-      <input class= "formVal" type="number" name="test_amount"/>
+      <span id="test_amount_text">How many quizzes did you take?<span class="astric">*</span></span>
+      <input class= "formVal" type="number" min="1" max="3" name="test_amount"/>
     </div>
 
     <div class="input_group">
-      <span id="complete_date_text">When did you finish them? (*)</span>
+      <span id="complete_date_text">When did you finish them?<span class="astric">*</span></span>
       <input class= "formVal" type="date" name="complete_date"/>
     </div>
 

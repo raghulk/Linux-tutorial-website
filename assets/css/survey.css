@@ -71,7 +71,8 @@ input:focus, textarea:focus{
 
 /* Add styling to survey thank you message */
 .survey_message {
-	font-size: 30px;
+	font-size: 1.2em;
+    color: #044B7F;
 }
 
 /* Position the navbar container inside the image */
