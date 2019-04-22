@@ -1,9 +1,9 @@
+
 /* begino of display.none,hover and animation*/
 .burger-menu-block .li{
     display:none;
 }
 .burger-menu-block:hover .li{
-    
     display:block;
 }
 .burger-menu:hover .burger-menu-block{
@@ -25,30 +25,31 @@ nav{
     width:auto;
     height:100px;
     z-index: 1;
+    
     /* transform:translateZ(2px);
     -webkit-transform:translateZ(2px); */
     /* border:1px solid black; */
 }
 .burger-menu{
-    width:0;    /* here is to change width of burger menu ,default will be 300px*/
+    width:0px;    /* here is to change width of burger menu ,default will be 300px*/
     height:80px;
-    /* border:1px solid black; */
-    float:right;
+    position: absolute;
+    right:0;
 }
 .burger-menu-block{
-    height:0;   /* here is to change the height of burger menu /default will be 300px*/
+    height:0px;   /* here is to change the height of burger menu /default will be 300px*/
     /* border:1px solid black; */
     margin-top:25px;
     background-color: #107E7D;
+    display:block;
 }
 .burger-float-block-right{
     width:auto;
     height:70px;    /* here is the height that can control the burger menu height border */
-    /* border:1px solid black; */
 }
 .burger-float-right{
     float:right;
-    padding-right:20px;/* here is for the burger margin, because it is float right. */
+    padding-right:0px;/* here is for the burger margin, because it is float right. */
 }
 .burger{
     background-color: white;
