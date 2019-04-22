@@ -140,10 +140,10 @@ button a{
         display:grid;
         grid-template-columns: 1fr 4fr;
         grid-template-rows: 1fr;
-        width:95vw;
+        width:97vw;
         margin:1em auto;
     }
     #leftColumn {
-        padding-right: 2em;
+        padding-right: 1em;
     }
 }
