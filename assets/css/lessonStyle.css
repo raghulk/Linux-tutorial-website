@@ -10,7 +10,7 @@ background-color:#ECEFEF;
     display:grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
-    width:80vw;
+    width:95vw;
     margin:2em auto;
 }
 
@@ -46,7 +46,7 @@ h1 {
 	color:#107e7d;
 }
 .content {
-		width:80%;
+		width:90%;
 }
 .lesson {
 	border-style: solid;
@@ -128,4 +128,22 @@ button a{
 .quiz-sec form input{
     margin-left:2em;
     margin-top:1em;
+}
+/* @media screen and (max-width:385px){
+    #lesson-wrap, #quiz-wrap{
+        width:100vw;
+        margin:2em auto;
+    }
+} */
+@media screen and (max-width:760px){
+    #lesson-wrap, #quiz-wrap{
+        display:grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr;
+        width:95vw;
+        margin:1em auto;
+    }
+    #leftColumn {
+        padding-right: 2em;
+    }
 }
