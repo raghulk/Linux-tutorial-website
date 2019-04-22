@@ -93,6 +93,7 @@ button{
     padding:.5em .75em;
     margin:0 auto;
     display:block;
+    outline: none;
 }
 
 button:hover{
