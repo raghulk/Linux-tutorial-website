@@ -1,61 +1,47 @@
 //script
-/* Validates the form */
-function checkForm() {
-    cleanForm();
+function submitSurveyForm(e) {
+    e.preventDefault();
 
-    // Get input values
-    var testAmount = document.getElementById("test_amount").value;
-    var visitDate = document.getElementById("visit_date").value;
-
-    // Init variables
-    var currentDate = new Date();
-    var inputDate = new Date(visitDate);
-    var valid = true;
-
-    // Validates the amount of test
-    if (testAmount === "") {
-        var testAmountText = document.getElementById("test_amount_text");
-        peopleAmountText.style.color = "#e60000";
-        valid = false;
+    var elements = document.getElementsByClassName("formVal");
+    var formData = new FormData();
+    for(var i = 0; i < elements.length; i++){
+        formData.append(elements[i].name, elements[i].value);
     }
+    var http = new XMLHttpRequest();
+    /*
+        STATUS 4 - REQUEST FINISHED AND RESPONSE IS READY
+        STATUS 200 - DONE
+     */
+    http.onreadystatechange = function(){
+        // Success
+        if(http.readyState == 4 && http.status == 200){
+            var obj = JSON.parse(http.responseText);
+            if(obj.status == "200"){
+                clearRedColor();
+                document.getElementById("survey_message").innerText = obj.message;
+                document.getElementById("survey").classList.add("survey");
 
-    // Validates the visit date
-    if (visitDate === "" || inputDate > currentDate) {
-        var visitDateText = document.getElementById("visit_date_text");
-        visitDateText.style.color = "#e60000";
-        valid = false;
-    }
+                setTimeout(function(){
+                    location.reload();
+                }, 10000);
+            }
+            else if(obj.status == "400"){
+                clearRedColor();
+                var objText = document.getElementById(obj.id.toString());
+                objText.className = "redColor";
+                document.getElementById("warning_message").innerText = obj.message;
+            }
 
-    // No errors mean the form will be submitted
-    if (!valid) {
-        return false;
+        }
     }
+    //Open and send the POST data
+    http.open("POST", "surveyprocess.php", true);
+    http.send(formData);
 }
 
-/* Resets the form to default values */
-function resetForm() {
-    var testAmount = document.getElementById("test_amount");
-    var visitDate = document.getElementById("visit_date");
-    var rate = document.getElementById("rate");
-    var rate_quiz = document.getElementById("rate");
-    var comments = document.getElementById("comments");
-
-    testAmount.value = "";
-    visitDate.value = "";
-    rate.value = 6;
-    rate_quiz.vale = 6;
-    comments.value = "";
-
-    cleanForm();
-}
-
-/* Remove font color and warning message */
-function cleanForm() {
-    var testAmountText = document.getElementById("test_amount_text");
-    var visitDateText = document.getElementById("visit_date_text");
-    var warningMessage = document.getElementById("warning_message");
-
-    testAmountText.style.color = "";
-    visitDateText.style.color = "";
-    warningMessage.innerHTML = "";
+function clearRedColor(){
+    //Clear the current red selector from <span> based on the length
+    if(document.getElementsByClassName("redColor").length > 0){
+        document.getElementsByClassName("redColor")[0].classList.remove("redColor")
+    }
 }
