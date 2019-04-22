@@ -103,7 +103,7 @@
                 <input type = "submit">
                 </form>';
             } else{
-                echo '<h4 id ="email"><span class ="title">Teacher\'s email:</span>&emsp;'.$_SESSION['teacher-email'].'</h4><p id ="change">Change teacher\'s email</p>';
+                echo '<h4 id ="email"><span class ="title">Teacher\'s email:</span>&emsp;'.$_SESSION['teacher-email'].'</h4><p style="cursor: pointer;" id ="change">Change teacher\'s email</p>';
             }
         ?>
         <form action ='<?php $_SERVER["PHP_SELF"]?>' method ="POST" onsubmit = "return validateTeacher();" id = "changeEmail">

@@ -44,7 +44,7 @@ session_name("login");
 
     <h3 class ="subheading-h3">Contact us</h3>
 
-    <div class = "contactComment">
+    <div class = "boxComment">
     <p>Tariq Afoke tba8537@rit.edu</p>
     <p>Arber Deski ad9238@rit.edu</p>
     <p>Raghul Krishnan rk2384@rit.edu</p>

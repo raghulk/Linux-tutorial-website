@@ -21,7 +21,7 @@ h1{
 }
 
 #profile-cont{
-    width:70%;
+    width:90%;
     margin:0 auto;
 }
 
@@ -61,11 +61,16 @@ input[type='submit']{
     font-size:1em;
     padding:.5em .75em;
     display:block;
+    cursor: pointer;
+    outline: none;
 }
 
 #out{
     color:white;
     text-decoration: none;
+}
+#profile-cont button{
+    outline: none;
 }
 
 .quiz-record a{
@@ -74,11 +79,14 @@ input[type='submit']{
 
 
 
-@media only screen and (max-width:500px){
+@media only screen and (max-width:600px){
     #profile-cont{
-        width:auto;
+        width:90%;
     }
-    
+    #profile-wrap{
+        width: 91%;
+        padding: 0.5em;
+    }
     #changeEmail{
         margin-left:0;
     }
