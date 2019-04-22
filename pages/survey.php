@@ -2,9 +2,9 @@
 session_start();
 session_name("login");
 
-    $title = "Survey";
+    $title = "About";
     $content ="content";
-    $filename = "survey.php";
+    $filename = "about.php";
     $prefix ="../";
     $styleFile ="survey.css";
     $script ="survey.js";
@@ -17,58 +17,43 @@ session_name("login");
 <h1 class ="center">Survey</h1>
 
 <!-- Content -->
-
-<?php
-// User click submit
-if (isset($_POST['submit'])) {
-?>
-<div class="survey">
-  <span class="survey_message">Thank you for submitting!</span>
-</div>
-<?php
-//If user didn't fill out the requirement then return to this
-} else {
-?>
-<form action="survey.php" method="post" onsubmit="return checkForm()" name="survey_form">
+<div id = "survey"><span id="survey_message" class="survey_message"></span></div>
+<form action="" method="post" onsubmit="return submitSurveyForm(event)" name="survey_form">
   <div class="survey">
     <div class="warning_message" id="warning_message"></div>
 
     <div class="input_group">
-      <span id="test_amount_text">How many quizzes did you take?<span class="astric">*</span> </span>
-      <input type="number" name="test_amount" min="1" max="3" id="test_amount" />
+      <span id="test_amount_text">How many quizzes did you take? (*)</span>
+      <input class= "formVal" type="number" name="test_amount"/>
     </div>
 
     <div class="input_group">
-      <span id="visit_date_text">When did you finish them?<span class="astric">*</span></span>
-      <input type="date" name="visit_date" id="visit_date" />
+      <span id="complete_date_text">When did you finish them? (*)</span>
+      <input class= "formVal" type="date" name="complete_date"/>
     </div>
 
 
     <div class="input_group">
       <span id="rate_text">Rate this website (1 - 10):</span>
-      <input type="range" name="rate" id="rate" min="1" max="10" />
+      <input class= "formVal" type="range" name="rate" min="1" max="10" />
     </div>
 
     <div class="input_group">
       <span id="rate_text">How hard were the quizzes, on average? (1 - 10):</span>
-      <input type="range" name="rate" id="rate_quiz" min="1" max="10" />
+      <input class= "formVal" type="range" name="rate_quiz" min="1" max="10" />
     </div>
 
 
     <div class="input_group">
       <span id="comments_text"></span>
-      <textarea rows="8" name="comment" id="comments" placeholder="Any other comments?"></textarea>
+      <textarea class= "formVal" placeholder="Any other comments?" rows="6" cols="60" name="comment"></textarea>
     </div>
 
-    <div class="input_group1">
+    <div class="input_group">
       <input type="submit" name="submit" id="submit" value="Submit" />
-      <input type="button" name="reset" id="reset" value="Reset" onclick="resetForm()" />
+      <input type="reset" name="reset" id="reset" value="Reset"/>
     </div>
   </div>
 </form>
-<?php
-}
-?>
-
 
 <?php include "../foot.php"; ?>
