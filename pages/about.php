@@ -10,6 +10,7 @@ session_name("login");
     $script ="script.js";
 
     include "../head.php";
+    require '../../../../dbConnect.inc';
 
 ?>
 

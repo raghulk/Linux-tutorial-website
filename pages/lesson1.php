@@ -9,13 +9,14 @@ session_name("login");
     $styleFile ="lessonStyle.css";
     $script ="script.js";
 
-    include "../head.php"; 
+    include "../head.php";
+    require '../../../../dbConnect.inc';
 
 ?>
 
 <?php
 
-        $sql = "SELECT * from Lesson;";
+        $sql = "SELECT * from Lessons;";
             if($results = $mysqli->query($sql)){
 
             }
@@ -30,7 +31,7 @@ session_name("login");
                 }
             }
 
-            echo $records[1]['Content'];
+            echo $records[0]['Content'];
 ?>
 
 <?php include "../foot.php" ?>
