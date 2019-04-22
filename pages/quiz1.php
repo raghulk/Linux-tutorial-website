@@ -122,7 +122,7 @@ shuffle($QA);
     <div class="content" >
         <h1> Quiz 1 </h1>
         <div class="lesson quiz-sec">
-            <form>
+            <form action="quiz1.php" method="GET" onsubmit="return validateForm();">>
                 <?php 
                     $i=1;
                 //build each question and echo
@@ -140,4 +140,40 @@ shuffle($QA);
     </div> <!-- end of content -->
     </div> <!-- end of right column -->
 </div>
-<?php include "../foot.php" ?>
+<?php 
+	$score = 0
+	if (!empty($_GET['Q1'])){
+		if($_GET['Q1']['Correct']) {
+		$score+=20;
+		}}
+	if (!empty($_GET['Q2'])){
+		if($_GET['Q2']['Correct']) {
+		$score+=20;
+		}}
+	if (!empty($_GET['Q3'])){
+		if($_GET['Q3']['Correct']) {
+		$score+=20;
+		}}
+	if (!empty($_GET['Q4'])){
+		if($_GET['Q4']['Correct']) {
+		$score+=20;
+		}}
+	if (!empty($_GET['Q5'])){
+		if($_GET['Q5']['Correct']) {
+		$score+=20;
+		}}		
+	$emailAddress = "crs2417@rit.edu";
+	$emailSubject = "Group Project";
+    $emailBody = "Name is $name \n";
+	$emailBody .= "LessonID is 1 \n";
+	$emailBody .= "Score is $score \n";
+	mail($emailAddress, $emailSubject, $emailBody);
+		
+	$stmt = $mysqli->prepare("insert into UserScore(Username, LessonID, Score) VALUES (?,?,?)");
+		$stmt->bind_param("sii", $names, $lesson $score); 
+		$names=$_GET['name'];
+		$lesson=1;
+		$scores=$score;
+		$stmt->execute();
+		$stmt->close();
+include "../foot.php" ?>
