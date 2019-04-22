@@ -39,7 +39,7 @@
 }
 
 /* Add styling to button and submit types for input */
-input[type="submit"], input[type="button"] {
+input[type="submit"], input[type="reset"] {
 	 background-color:#0099CC;
     color:white;
     border:none;
@@ -52,7 +52,7 @@ input[type="submit"], input[type="button"] {
     margin-bottom:2em;
 }
 
-input[type="submit"]:hover, input[type="button"]:hover{
+input[type="submit"]:hover, input[type="reset"]:hover{
     background-color:#044B7F;
 }
 #rate{
@@ -96,4 +96,8 @@ textarea{
         margin: 0 !important;
         padding: 2em 0 0em .5em !important;
     }
+}
+
+.redColor{
+    color: red;
 }
