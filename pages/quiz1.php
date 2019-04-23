@@ -16,6 +16,7 @@ if($_SESSION['login'] != true){
 
     require "../../../../dbConnect.inc";
 
+ $name = $_SESSION['name'];
 
 //get questions
 if ($mysqli) {
@@ -141,7 +142,7 @@ shuffle($QA);
     </div> <!-- end of right column -->
 </div>
 <?php 
-	$score = 0
+	$score = 0;
 	if (!empty($_GET['Q1'])){
 		if($_GET['Q1']['Correct']) {
 		$score+=20;
@@ -161,8 +162,11 @@ shuffle($QA);
 	if (!empty($_GET['Q5'])){
 		if($_GET['Q5']['Correct']) {
 		$score+=20;
-		}}		
-	$emailAddress = "crs2417@rit.edu";
+		}}
+    
+   
+
+	$emailAddress = $_SESSION['t-email'];
 	$emailSubject = "Group Project";
     $emailBody = "Name is $name \n";
 	$emailBody .= "LessonID is 1 \n";
@@ -170,10 +174,14 @@ shuffle($QA);
 	mail($emailAddress, $emailSubject, $emailBody);
 		
 	$stmt = $mysqli->prepare("insert into UserScore(Username, LessonID, Score) VALUES (?,?,?)");
-		$stmt->bind_param("sii", $names, $lesson $score); 
-		$names=$_GET['name'];
-		$lesson=1;
+		 
+        $lesson=1;
 		$scores=$score;
+        $stmt->bind_param("sii", $name, $lesson, $score);
 		$stmt->execute();
 		$stmt->close();
+    if(!empty($_GET)){
+        header ("Location: profile.php");
+    }
+
 include "../foot.php" ?>
