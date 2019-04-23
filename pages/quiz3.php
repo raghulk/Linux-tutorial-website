@@ -4,8 +4,8 @@ session_start();
 session_name("login");
 if($_SESSION['login'] != true){
     header("Location: login.php");
-}else{
-    header("Location:profile.php");
+}
+else{
     $welcome = $_SESSION['name'];
 }
 

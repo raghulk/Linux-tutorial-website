@@ -18,13 +18,15 @@ if(!empty($_SESSION)){
     {
         var idElement =document.getElementById("id");
         var name = "<?php echo $welcome;?>";
-        // console.log(name);
+         console.log(name);
         if(name != ''){
-            var child = document.createTextNode("Hi, "+ name);
-            idElement.appendChild(child);
-        }else{
-            var child = document.createTextNode("Login");
-            idElement.appendChild(child);
+            var child = document.getElementById("id").innerHTML = "Hi, " + name;
+//            idElement.appendChild(child);
+        }
+        else{
+//            var child = document.getElementById("id").innerHTML= "Login";
+//            var child = document.createTextNode("Login");
+//            idElement.appendChild(child);
         }
     }
 </script>
@@ -35,7 +37,7 @@ if(!empty($_SESSION)){
         <ul>
 <!--            <?php echo $login; ?>-->
 
-            <li><a id ="id" href ="<?php echo $prefix ?>pages/profile.php"<?php echo (isset($title) && $title=='Login') ? ' class="active"' : ''; ?>><?php echo "<script>welcome();</script>";?></a></li>
+            <li><a id ="id" href ="<?php echo $prefix ?>pages/profile.php"<?php echo (isset($title) && $title=='Login') ? ' class="active"' : ''; ?>><?php echo "<script>welcome();</script>";?>Login</a></li>
             <li><a href ="<?php echo $prefix ?>pages/comments.php"<?php echo (isset($title) && $title=='Comments') ? ' class="active"' : ''; ?>>Comments</a></li>
             <li><a href ="<?php echo $prefix ?>pages/survey.php"<?php echo (isset($title) && $title=='Survey') ? ' class="active"' : ''; ?>>Survey</a></li>
             <li><a href ="<?php echo $prefix ?>pages/glossary.php"<?php echo (isset($title) && $title=='Glossary') ? ' class="active"' : ''; ?>>Glossary</a></li>

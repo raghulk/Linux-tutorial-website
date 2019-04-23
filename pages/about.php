@@ -4,6 +4,8 @@ session_name("login");
 
 if(isset($_SESSION['name'])){
     $welcome = $_SESSION['name'];
+}else{
+    $welcome = '';
 }
 
     $title = "About";

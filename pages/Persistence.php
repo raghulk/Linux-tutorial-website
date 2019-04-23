@@ -3,6 +3,8 @@ date_default_timezone_set('America/New_York');
 
 if(isset($_SESSION['name'])){
   $welcome = $_SESSION['name'];
+}else{
+    $welcome = '';
 }
 
 class Persistence {

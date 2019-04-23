@@ -2,6 +2,8 @@
 require_once("../../../../dbConnect.inc");
 if(isset($_SESSION['name'])){
     $welcome = $_SESSION['name'];
+}else{
+    $welcome = '';
 }
 
 function sanitize($str) {
