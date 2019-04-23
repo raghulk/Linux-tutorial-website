@@ -3,6 +3,7 @@ session_start();
 session_name("login");    
 
 if(isset($_SESSION['name'])){
+    header("Location: profile.php");
     $welcome = $_SESSION['name'];
 }else{
     $welcome = '';
