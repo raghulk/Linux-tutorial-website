@@ -11,11 +11,13 @@ if($_SESSION['login'] != true){
     $filename = "quiz3.php";
     $prefix ="../"; 
     $styleFile ="lessonStyle.css";
-    $script ="script.js";
+    $script ="quizScript.js";
 
     include "../head.php"; 
 
-require "../../../../dbConnect.inc";
+    require "../../../../dbConnect.inc";
+
+$name = $_SESSION['name'];
 
 //get questions
 if ($mysqli) {
@@ -101,8 +103,8 @@ function buildQuestion($quest, $aSet, $num){
     
     //NOTE: a value of 1 means a correct answer. 0 is wrong. These are auto populated when the question is built
     
-    $html = "<p>$qText</p><input id ='A$num-1' type = 'radio' name = 'Q$num' value ='$an1[1]'><label for = 'A$num-1'>$an1[0]</label><br><input id ='A$num-2' type = 'radio' name = 'Q$num' value ='$an2[1]'><label for = 'A$num-2'>$an2[0]</label><br><input id ='A$num-3' type = 'radio' name = 'Q$num' value ='$an3[1]'><label for = 'A$num-3'>$an3[0]</label><br><input id ='A$num-4' type = 'radio' name = 'Q$num' value ='$an4[1]'><label for = 'A$num-4'>$an4[0]</label><br>";
-        
+        $html = "<p>$qText</p><input id ='A$num-1' type = 'radio' name = 'Q$num' value ='$an1[1]' onclick ='correct($num, 1)'><label id = 'l$num-1' for = 'A$num-1'>$an1[0]</label><br><input id ='A$num-2' type = 'radio' name = 'Q$num' value ='$an2[1]' onclick ='correct($num, 2)'><label id = 'l$num-2' for = 'A$num-2'>$an2[0]</label><br><input id ='A$num-3' type = 'radio' name = 'Q$num' value ='$an3[1]' onclick ='correct($num, 3)'><label id = 'l$num-3' for = 'A$num-3'>$an3[0]</label><br><input id ='A$num-4' type = 'radio' name = 'Q$num' value ='$an4[1]' onclick ='correct($num, 4)'><label id = 'l$num-4' for = 'A$num-4'>$an4[0]</label><br>";
+    
     return $html;
 }
 
@@ -120,7 +122,7 @@ shuffle($QA);
     <div class="content" >
         <h1> Quiz 3 </h1>
         <div class="lesson quiz-sec">
-            <form action="quiz3.php" method="GET" onsubmit="return validateForm();">
+            <form action="quiz3.php" method="POST" onsubmit="return validateForm();">
                <?php 
                     $i=1;
                 //build each question and echo
@@ -165,6 +167,7 @@ $score = 0;
     $names=$_SESSION['name'];
 		$lesson=3;
 		$scores=$score;
+    //$emailAddress = "RITISTprofessor@gmail.com";
 	$emailAddress = "rk2384@rit.edu";
 	$emailSubject = "Quiz $lesson Score";
     $emailBody = "Name is $names \n";
