@@ -94,6 +94,7 @@ button{
     margin:0 auto;
     display:block;
     outline: none;
+    cursor: pointer;
 }
 
 button:hover{

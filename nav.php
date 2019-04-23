@@ -17,7 +17,7 @@ if(!empty($_SESSION)){
     <div class="screen-max-570">
         <ul>
 <!--            <?php echo $login; ?>-->
-            <li><a href ="<?php echo $prefix ?>pages/login.php"<?php echo (isset($title) && $title=='Login') ? ' class="active"' : ''; ?>>Login</a></li>
+            <li><a href ="<?php echo $prefix ?>pages/profile.php"<?php echo (isset($title) && $title=='Login') ? ' class="active"' : ''; ?>>Login</a></li>
             <li><a href ="<?php echo $prefix ?>pages/comments.php"<?php echo (isset($title) && $title=='Comments') ? ' class="active"' : ''; ?>>Comments</a></li>
             <li><a href ="<?php echo $prefix ?>pages/survey.php"<?php echo (isset($title) && $title=='Survey') ? ' class="active"' : ''; ?>>Survey</a></li>
             <li><a href ="<?php echo $prefix ?>pages/glossary.php"<?php echo (isset($title) && $title=='Glossary') ? ' class="active"' : ''; ?>>Glossary</a></li>
@@ -38,7 +38,7 @@ if(!empty($_SESSION)){
                     </div>
                     <!-- .div menu -->
                     <div class="li">
-                        <div><a href ="<?php echo $prefix ?>pages/login.php">Login</a></div>
+                        <div><a href ="<?php echo $prefix ?>pages/profile.php">Login</a></div>
                         <div><a href ="<?php echo $prefix ?>pages/directory.php"<?php echo (isset($title) && $title=='Lessons and Quizzes') ? ' class="active"' : ''; ?>>Lessons and Quizzes</a></div>
                         <div><a href ="<?php echo $prefix ?>pages/glossary.php"<?php echo (isset($title) && $title=='Glossary') ? ' class="active"' : ''; ?>>Glossary</a></div>
                         <div><a href ="<?php echo $prefix ?>pages/survey.php"<?php echo (isset($title) && $title=='Survey') ? ' class="active"' : ''; ?>>Survey</a></div>

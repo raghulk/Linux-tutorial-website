@@ -120,7 +120,7 @@ shuffle($QA);
     <div class="content" >
         <h1> Quiz 3 </h1>
         <div class="lesson quiz-sec">
-            <form action="quiz1.php" method="GET" onsubmit="return validateForm();">>
+            <form action="quiz3.php" method="GET" onsubmit="return validateForm();">
                <?php 
                     $i=1;
                 //build each question and echo
@@ -130,48 +130,53 @@ shuffle($QA);
                     }
 
                 ?>
+            <button id ="quiz-btn" type="submit">Submit</button>
             </form>
         </div> <!-- end of lesson -->
         <div class ="quiz">
-            <button id ="quiz-btn" type="button"><a href="#">Submit</a></button>
         </div> <!-- end of quiz -->
     </div> <!-- end of content -->
     </div> <!-- end of right column -->
 </div>
 <?php 
-	$score = 0
+//var_dump($_GET);
+$score = 0;
 	if (!empty($_GET['Q1'])){
-		if($_GET['Q1']['Correct']) {
-		$score+=20;
+		if($_GET['Q1']) {
+		$score+=1;
 		}}
 	if (!empty($_GET['Q2'])){
-		if($_GET['Q2']['Correct']) {
-		$score+=20;
+		if($_GET['Q2']) {
+		$score+=1;
 		}}
 	if (!empty($_GET['Q3'])){
-		if($_GET['Q3']['Correct']) {
-		$score+=20;
+		if($_GET['Q3']) {
+		$score+=1;
 		}}
 	if (!empty($_GET['Q4'])){
-		if($_GET['Q4']['Correct']) {
-		$score+=20;
+		if($_GET['Q4']) {
+		$score+=1;
 		}}
 	if (!empty($_GET['Q5'])){
-		if($_GET['Q5']['Correct']) {
-		$score+=20;
+		if($_GET['Q5']) {
+		$score+=1;
 		}}		
-	$emailAddress = "crs2417@rit.edu";
-	$emailSubject = "Group Project";
-    $emailBody = "Name is $name \n";
-	$emailBody .= "LessonID is 3 \n";
-	$emailBody .= "Score is $score \n";
-	mail($emailAddress, $emailSubject, $emailBody);
-		
-	$stmt = $mysqli->prepare("insert into UserScore(Username, LessonID, Score) VALUES (?,?,?)");
-		$stmt->bind_param("sii", $names, $lesson $score); 
-		$names=$_GET['name'];
+//	var_dump($_SESSION);	
+    $names=$_SESSION['name'];
 		$lesson=3;
 		$scores=$score;
-		$stmt->execute();
-		$stmt->close();
-include "../foot.php" ?>
+	$emailAddress = "rk2384@rit.edu";
+	$emailSubject = "Quiz $lesson Score";
+    $emailBody = "Name is $names \n";
+//	$emailBody .= "LessonID is 3 \n";
+	$emailBody .= "Score is $scores \n";
+	mail($emailAddress, $emailSubject, $emailBody);
+		
+	$stmt = "DELETE FROM UserScore WHERE Username='".$names."' AND LessonID='".$lesson."'";
+    $mysqli->query($stmt);
+    $stmt = $mysqli->prepare("INSERT INTO UserScore(Username, LessonID, Score) VALUES (?,?,?)");
+	$stmt->bind_param("sii", $names, $lesson, $scores); 
+	$stmt->execute();
+	$stmt->close();
+include "../foot.php" 
+?>

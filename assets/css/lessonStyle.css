@@ -46,7 +46,7 @@ h1 {
 	color:#107e7d;
 }
 .content {
-		width:90%;
+		width:    95%;
 }
 .lesson {
 	border-style: solid;
@@ -141,10 +141,15 @@ button a{
         display:grid;
         grid-template-columns: 1fr 4fr;
         grid-template-rows: 1fr;
-        width:97vw;
+/*        width:97vw;*/
         margin:1em auto;
     }
     #leftColumn {
         padding-right: 1em;
+    }
+}
+@media screen and (max-width:500px){
+    .content{
+        width: 97%;
     }
 }

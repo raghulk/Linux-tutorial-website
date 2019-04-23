@@ -6,6 +6,11 @@
 	if(!$_SESSION['login']){
 		header('Location: login.php');
 	}
+    else{
+        echo '<script type="text/javascript">',
+     'login_usernamechange();',
+     '</script>'
+    }
     
     $title = "Profile";
     $content ="Profile";
@@ -71,15 +76,18 @@
     $score1 = "N/A";
     $score2 = "N/A";
     $score3 = "N/A";
-
+//    var_dump($quizScore);
     //sort scores into appropriate lesson variables 
     if(isset($quizScore)){
         foreach($quizScore as $score){
+//            var_dump($score['Score']);
             if($score['LessonID']==1){
                 $score1 =$score['Score'];
-            } else if ($score['LessonID']==2){
+            }
+            else if ($score['LessonID']==2){
                 $score2 =$score['Score'];
-            }else if ($score['LessonID']==3){
+            }
+            else if ($score['LessonID']==3){
                 $score3 =$score['Score'];
             }
         }
@@ -126,7 +134,7 @@
                 } ?></h5>
             <h5 class ="quiz-record"><span class ="title">Quiz 3:</span>&emsp;<?php if ($score3 =="N/A"){echo "You haven't taken this quiz yet! Start it <a class = 'quizLink' href ='quiz3.php'>here.</a>";
                 } else{
-                    echo "<span class ='score'>".$score2."/5</span>";
+                    echo "<span class ='score'>".$score3."/5</span>";
                 } ?></h5>
         </div>
 
