@@ -14,6 +14,8 @@ session_name("login");
 
 ?>
 
+<div id="lesson-wrap">
+    <?php include"../assets/includes/sideMenu.php"; ?>
 <?php
 
         $sql = "SELECT * from Lessons;";
@@ -33,5 +35,6 @@ session_name("login");
 
             echo $records[1]['Content'];
 ?>
+</div>
 
 <?php include "../foot.php" ?>
