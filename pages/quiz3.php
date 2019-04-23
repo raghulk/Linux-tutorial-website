@@ -15,7 +15,9 @@ if($_SESSION['login'] != true){
 
     include "../head.php"; 
 
-require "../../../../dbConnect.inc";
+    require "../../../../dbConnect.inc";
+
+$name = $_SESSION['name'];
 
 //get questions
 if ($mysqli) {
@@ -120,7 +122,7 @@ shuffle($QA);
     <div class="content" >
         <h1> Quiz 3 </h1>
         <div class="lesson quiz-sec">
-            <form action="quiz3.php" method="GET" onsubmit="return validateForm();">
+            <form action="quiz3.php" method="POST" onsubmit="return validateForm();">
                <?php 
                     $i=1;
                 //build each question and echo
@@ -165,6 +167,7 @@ $score = 0;
     $names=$_SESSION['name'];
 		$lesson=3;
 		$scores=$score;
+    //$emailAddress = "RITISTprofessor@gmail.com";
 	$emailAddress = "rk2384@rit.edu";
 	$emailSubject = "Quiz $lesson Score";
     $emailBody = "Name is $names \n";
