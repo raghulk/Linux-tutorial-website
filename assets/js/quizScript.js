@@ -1,5 +1,28 @@
-	function validateQ1() {
-		var ispicked = true;
+    function checkRadSelected(x){
+        var isSelected = false;
+        var itemsLength = document.getElementsByName(x).length;
+        var selectedItems = new Array();
+        for(var j = 0; j < itemsLength; j++){
+            if(document.getElementsByName("fav_visited")[j].checked){
+                selectedItems.push(document.getElementsByName("fav_visited")[j].value);
+            }
+        } // end of for loop
+
+        if(selectedItems.length > 0){
+            document.getElementsByTagName("fieldset")[0].style.borderColor = "";
+            document.getElementsByTagName("legend")[0].style.color = "";
+            isSelected = true;
+        }
+        else{
+            document.getElementsByTagName("fieldset")[0].style.borderColor = "#C15132";
+            document.getElementsByTagName("legend")[0].style.color = "#C15132";
+        }
+
+        return isSelected;
+    }
+
+    function validateQ1() {
+		ispicked = checkRadSelected("Q1");
 		if (document.getElementById("Q1").value == 0) {
 			document.getElementById("Q1").style.borderColor = "red";
 			document.getElementById("Q1").style.color = "red";
@@ -42,7 +65,6 @@
 		return (ispicked);
     
     }
-
     function validateQ4(){
 		ispicked = true;
 		if (document.getElementById("Q4").value == null) {

@@ -6,6 +6,9 @@
 	if(!$_SESSION['login']){
 		header('Location: login.php');
 	}
+    else{
+        $welcome = $_SESSION['name'];
+    }
     
     $title = "Profile";
     $content ="Profile";
