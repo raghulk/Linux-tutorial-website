@@ -140,12 +140,10 @@ shuffle($QA);
             <button id ="quiz-btn" type="submit">Submit</button>
             </form>
         </div> <!-- end of lesson -->
-        <div class ="quiz">
-        </div> <!-- end of quiz -->
     <?php 
-    echo "Corect Questions";
+    echo "Correct Questions";
 	$score = 0;
-        var_dump($_POST);
+//        var_dump($_POST);
 	if (!empty($_POST['Q1'])){
 		if($_POST['Q1']) {
             $score+=1;

@@ -53,7 +53,7 @@ h1 {
 	border-color:#004B7F;
 	border-width:.2em;
 	min-height:70vh;
-    border-bottom:none;
+/*    border-bottom:none;*/
     max-height:85vh;
     overflow-x: hidden;
     overflow-y: scroll;
