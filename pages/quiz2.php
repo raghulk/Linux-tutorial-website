@@ -139,7 +139,7 @@ shuffle($QA);
     </div> <!-- end of right column -->
 </div>
 <?php 
-	$score = 0
+	$score = 0;
 	if (!empty($_GET['Q1'])){
 		if($_GET['Q1']) {
 		$score+=1;
