@@ -1,5 +1,8 @@
 <?php
 require_once("../../../../dbConnect.inc");
+if(isset($_SESSION['name'])){
+    $welcome = $_SESSION['name'];
+}
 
 function sanitize($str) {
     $str = trim($str);

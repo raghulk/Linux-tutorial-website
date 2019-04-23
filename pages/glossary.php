@@ -2,6 +2,10 @@
 session_start();
 session_name("login");
 
+if(isset($_SESSION['name'])){
+    $welcome = $_SESSION['name'];
+}
+
     $title = "Glossary";
     $content ="content";
     $filename = "glossary.php";

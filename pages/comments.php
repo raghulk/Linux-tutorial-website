@@ -3,6 +3,10 @@ require('Persistence.php');
 session_start();
 session_name("login");
     
+if(isset($_SESSION['name'])){
+    $welcome = $_SESSION['name'];
+}
+
     $title = "Comments";
     $content ="Unix Comments";
     $filename = "comments.php";

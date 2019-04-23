@@ -1,5 +1,9 @@
 <?php
 require('Persistence.php');
+if(isset($_SESSION['name'])){
+  $welcome = $_SESSION['name'];
+}
+
 
 $db = new Persistence();
 $added = $db->add_comment($_POST);

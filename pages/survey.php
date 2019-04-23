@@ -2,6 +2,10 @@
 session_start();
 session_name("login");
 
+if(isset($_SESSION['name'])){
+  $welcome = $_SESSION['name'];
+}
+
     $title = "Survey";
     $content ="content";
     $filename = "survey.php";
