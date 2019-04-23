@@ -141,41 +141,49 @@ shuffle($QA);
         </div> <!-- end of lesson -->
         <div class ="quiz">
         </div> <!-- end of quiz -->
-    </div> <!-- end of content -->
-    </div> <!-- end of right column -->
-</div>
-<?php 
-//var_dump($_GET);
-$score = 0;
+        <?php 
+    echo "Corect Questions";
+	$score = 0;
+        var_dump($_POST);
 	if (!empty($_POST['Q1'])){
 		if($_POST['Q1']) {
-		$score+=1;
-		}}
+            $score+=1;
+            echo "Question 1 ";
+            }
+        }
 	if (!empty($_POST['Q2'])){
 		if($_POST['Q2']) {
-		$score+=1;
-		}}
+            $score+=1;
+            echo "Question 2 ";
+            }
+        }
 	if (!empty($_POST['Q3'])){
 		if($_POST['Q3']) {
-		$score+=1;
-		}}
+            $score+=1;
+            echo "Question 3 ";
+            }
+        }
 	if (!empty($_POST['Q4'])){
 		if($_POST['Q4']) {
-		$score+=1;
-		}}
+            $score+=1;
+            echo "Question 4 ";
+            }
+        }
+//		if($_POST['Q4']==0) {
 	if (!empty($_POST['Q5'])){
 		if($_POST['Q5']) {
-		$score+=1;
-		}}		
-//	var_dump($_SESSION);	
+            $score+=1;
+            echo "Question 5 ";
+            }
+        }
     $names=$_SESSION['name'];
-		$lesson=3;
+		$lesson=1;
 		$scores=$score;
-//    $emailAddress = "RITISTprofessor@gmail.com";
+    //$emailAddress = "RITISTprofessor@gmail.com";
 //	$emailAddress = "rk2384@rit.edu";
 	$emailSubject = "Quiz $lesson Score";
     $emailBody = "Name is $names \n";
-//	$emailBody .= "LessonID is 3 \n";
+//	$emailBody .= "LessonID is 1 \n";
 	$emailBody .= "Score is $scores \n";
 	mail($temail, $emailSubject, $emailBody);
 		
@@ -184,6 +192,13 @@ $score = 0;
     $stmt = $mysqli->prepare("INSERT INTO UserScore(Username, LessonID, Score) VALUES (?,?,?)");
 	$stmt->bind_param("sii", $names, $lesson, $scores); 
 	$stmt->execute();
-	$stmt->close();
+	$stmt->close(); ?>
+    </div> <!-- end of content -->
+    </div> <!-- end of right column -->
+</div>
+<?php 
+//var_dump($_GET);
+$score = 0;
+<?php 
 include "../foot.php" 
 ?>
