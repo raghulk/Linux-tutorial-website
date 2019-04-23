@@ -1,6 +1,6 @@
 	function validateQ1() {
-		ispicked = true;
-		if (document.getElementById("Q1").value == null) {
+		var ispicked = true;
+		if (document.getElementById("Q1").value == 0) {
 			document.getElementById("Q1").style.borderColor = "red";
 			document.getElementById("Q1").style.color = "red";
 			document.getElementById("Q1").style.backgroundColor = 'pink';
@@ -11,6 +11,8 @@
 			ispicked = true;
 		}
 		return (ispicked);
+    }
+        
 	function validateQ2() {
 		ispicked = true;
 		if (document.getElementById("Q2").value == Select) {
@@ -24,6 +26,8 @@
 			ispicked = true;
 		}
 		return (ispicked);
+    }
+        
 	function validateQ3(){
 		ispicked = true;
 		if (document.getElementById("Q3").value == Select) {
@@ -37,7 +41,10 @@
 			ispicked = true;
 		}
 		return (ispicked);
-			function validateQ4(){
+        
+    }
+
+    function validateQ4(){
 		ispicked = true;
 		if (document.getElementById("Q4").value == null) {
 			document.getElementById("Q4").style.borderColor = "red";
@@ -50,6 +57,9 @@
 			ispicked = true;
 		}
 		return (ispicked);
+                
+    }
+        
 	function validateQ5(){
 		ispicked = true;
 		if (document.getElementById("Q5").value == null) {
@@ -81,3 +91,77 @@
 
 	}
 		
+
+    function correct(num, select){
+        let a1 ="A"+num+"-1";
+        let a2 ="A"+num+"-2";
+        let a3 ="A"+num+"-3";
+        let a4 ="A"+num+"-4";
+        
+        let l1 ="l"+num+"-1";
+        let l2 ="l"+num+"-2";
+        let l3 ="l"+num+"-3";
+        let l4 ="l"+num+"-4";
+        
+        let selection = "A"+num+"-"+select;
+        let selectLabel = "l"+num+"-"+select;
+        let correct = null;
+
+        console.log("in correct");
+        let aArray = [a1,a2,a3,a4];
+        let lArray = [l1,l2,l3,l4];
+        
+        
+        for(let i =0; i<lArray.length; i++){
+            let curr = document.getElementById(lArray[i]);
+            curr.style.color = "black";
+        }
+        
+        for (let i =0; i<aArray.length; i++){
+            let curr = document.getElementById(aArray[i]);
+            if (curr.value ==0){
+                    console.log("incorrect"+curr);
+            } else if (curr.value ==1){
+                    console.log("correct"+curr);
+                    correct = aArray[i];
+            }
+        }
+
+
+
+        
+        if (selection ==correct){
+            document.getElementById(selectLabel).style.color = "green";
+        } else {
+            document.getElementById(selectLabel).style.color = "red";
+        }
+        
+
+    }
+                
+//    var one = document.getElementsByName("A1");
+//    var two =  document.getElementsByName("A2");
+//    var three =  document.getElementsByName("A3");
+//    var four =  document.getElementsByName("A4");
+//    var five = document.getElementsByName("A5");
+//                
+//                
+//    for (var x=0; x<one.length;x++){
+//        one[x].onclick =()=>{correct(1);}
+//    } 
+//                
+//    for (var x=0; x<two.length;x++){
+//        one[x].onclick =()=>{correct(2);}
+//    } 
+//                
+//    for (var x=0; x<three.length;x++){
+//        one[x].onclick =correct(3);
+//    }  
+//                
+//    for (var x=0; x<four.length;x++){
+//        one[x].onclick =correct(4);
+//    }    
+//                
+//    for (var x=0; x<five.length;x++){
+//        one[x].onclick =correct(5);
+//    }         
