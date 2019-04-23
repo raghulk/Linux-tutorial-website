@@ -4,7 +4,7 @@
         var selectedItems = new Array();
         for(var j = 0; j < itemsLength; j++){
             if(document.getElementsByName(x)[j].checked){
-                selectedItems.push(document.getElementsByName("fav_visited")[j].value);
+                selectedItems.push(document.getElementsByName(x)[j].value);
             }
         } // end of for loop
 
@@ -21,74 +21,74 @@
 
     function validateQ1() {
 		ispicked = checkRadSelected("Q1");
-		if (document.getElementById("Q1").value == 0) {
+		if (!ispicked) {
 			document.getElementById("Q1").style.borderColor = "red";
 			document.getElementById("Q1").style.color = "red";
 			document.getElementById("Q1").style.backgroundColor = 'pink';
 			ispicked = false;
 		} else {
 			document.getElementById("Q1").style = null;
-			document.getElementById("Q1").style="width:5em;";
+//			document.getElementById("Q1").style="width:5em;";
 			ispicked = true;
 		}
 		return (ispicked);
     }
         
 	function validateQ2() {
-		ispicked = true;
-		if (document.getElementById("Q1").value == Select) {
+		ispicked = checkRadSelected("Q2");
+		if (!ispicked) {
 			document.getElementById("Q2").style.borderColor = "red";
 			document.getElementById("Q2").style.color = "red";
 			document.getElementById("Q2").style.backgroundColor = 'pink';
-			ispicked = false;
+//			ispicked = false;
 		} else {
 			document.getElementById("Q2").style = null;
-			document.getElementById("Q2").style="width:5em;";
-			ispicked = true;
+//			document.getElementById("Q2").style="width:5em;";
+//			ispicked = true;
 		}
 		return (ispicked);
     }
 	function validateQ3(){
-		ispicked = checkRadselected("Q3");
-		if (document.getElementById("Q1").value == Select) {
+		ispicked = checkRadSelected("Q3");
+		if (!ispicked) {
 			document.getElementById("Q3").style.borderColor = "red";
 			document.getElementById("Q3").style.color = "red";
 			document.getElementById("Q3").style.backgroundColor = 'pink';
-			ispicked = false;
+//			ispicked = false;
 		} else {
 			document.getElementById("Q3").style = null;
-			document.getElementById("Q3").style="width:5em;";
-			ispicked = true;
+//			document.getElementById("Q3").style="width:5em;";
+//			ispicked = true;
 		}
 		return (ispicked);
     
     }
     function validateQ4(){
-		ispicked = true;
-		if (document.getElementById("Q4").value == null) {
+		ispicked = checkRadSelected("Q4");
+		if (!ispicked) {
 			document.getElementById("Q4").style.borderColor = "red";
 			document.getElementById("Q4").style.color = "red";
 			document.getElementById("Q4").style.backgroundColor = 'pink';
-			ispicked = false;
+//			ispicked = false;
 		} else {
 			document.getElementById("Q4").style = null;
-			document.getElementById("Q4").style="width:5em;";
-			ispicked = true;
+//			document.getElementById("Q4").style="width:5em;";
+//			ispicked = true;
 		}
 		return (ispicked);
         }
         
 	function validateQ5(){
-		ispicked = true;
-		if (document.getElementById("Q1").value == null) {
+		ispicked = checkRadSelected("Q5");
+		if (!ispicked) {
 			document.getElementById("Q5").style.borderColor = "red";
 			document.getElementById("Q5").style.color = "red";
 			document.getElementById("Q5").style.backgroundColor = 'pink';
-			ispicked = false;
+//			ispicked = false;
 		} else {
 			document.getElementById("Q5").style = null;
-			document.getElementById("Q5").style="width:5em;";
-			ispicked = true;
+//			document.getElementById("Q5").style="width:5em;";
+//			ispicked = true;
 		}
 		return (ispicked);
 	}
@@ -108,7 +108,6 @@
 
 	}
 		
-
 //    function correct(num, select){
 //        let a1 ="A"+num+"-1";
 //        let a2 ="A"+num+"-2";
@@ -154,31 +153,30 @@
 //        }
 //        
 //
-//    }
+//    }                
+//    var one = document.getElementsByName("A1");
+//    var two =  document.getElementsByName("A2");
+//    var three =  document.getElementsByName("A3");
+//    var four =  document.getElementsByName("A4");
+//    var five = document.getElementsByName("A5");
 //                
-////    var one = document.getElementsByName("A1");
-////    var two =  document.getElementsByName("A2");
-////    var three =  document.getElementsByName("A3");
-////    var four =  document.getElementsByName("A4");
-////    var five = document.getElementsByName("A5");
-////                
-////                
-////    for (var x=0; x<one.length;x++){
-////        one[x].onclick =()=>{correct(1);}
-////    } 
-////                
-////    for (var x=0; x<two.length;x++){
-////        one[x].onclick =()=>{correct(2);}
-////    } 
-////                
-////    for (var x=0; x<three.length;x++){
-////        one[x].onclick =correct(3);
-////    }  
-////                
-////    for (var x=0; x<four.length;x++){
-////        one[x].onclick =correct(4);
-////    }    
-////                
-////    for (var x=0; x<five.length;x++){
-////        one[x].onclick =correct(5);
-////    }         
+//                
+//    for (var x=0; x<one.length;x++){
+//        one[x].onclick =()=>{correct(1);}
+//    } 
+//                
+//    for (var x=0; x<two.length;x++){
+//        one[x].onclick =()=>{correct(2);}
+//    } 
+//                
+//    for (var x=0; x<three.length;x++){
+//        one[x].onclick =correct(3);
+//    }  
+//                
+//    for (var x=0; x<four.length;x++){
+//        one[x].onclick =correct(4);
+//    }    
+//                
+//    for (var x=0; x<five.length;x++){
+//        one[x].onclick =correct(5);
+//    }         

@@ -107,7 +107,7 @@ function buildQuestion($quest, $aSet, $num){
     
     //NOTE: a value of 1 means a correct answer. 0 is wrong. These are auto populated when the question is built
     
-        $html = "<p>$qText</p><input id ='A$num-1' type = 'radio' name = 'Q$num' value ='$an1[1]' onclick ='correct($num, 1)'><label id = 'l$num-1' for = 'A$num-1'>$an1[0]</label><br><input id ='A$num-2' type = 'radio' name = 'Q$num' value ='$an2[1]' onclick ='correct($num, 2)'><label id = 'l$num-2' for = 'A$num-2'>$an2[0]</label><br><input id ='A$num-3' type = 'radio' name = 'Q$num' value ='$an3[1]' onclick ='correct($num, 3)'><label id = 'l$num-3' for = 'A$num-3'>$an3[0]</label><br><input id ='A$num-4' type = 'radio' name = 'Q$num' value ='$an4[1]' onclick ='correct($num, 4)'><label id = 'l$num-4' for = 'A$num-4'>$an4[0]</label><br>";
+        $html = "<p id='Q$num'>$qText</p><input id ='A$num-1' type = 'radio' name = 'Q$num' value ='$an1[1]' onclick ='correct($num, 1)'><label id = 'l$num-1' for = 'A$num-1'>$an1[0]</label><br><input id ='A$num-2' type = 'radio' name = 'Q$num' value ='$an2[1]' onclick ='correct($num, 2)'><label id = 'l$num-2' for = 'A$num-2'>$an2[0]</label><br><input id ='A$num-3' type = 'radio' name = 'Q$num' value ='$an3[1]' onclick ='correct($num, 3)'><label id = 'l$num-3' for = 'A$num-3'>$an3[0]</label><br><input id ='A$num-4' type = 'radio' name = 'Q$num' value ='$an4[1]' onclick ='correct($num, 4)'><label id = 'l$num-4' for = 'A$num-4'>$an4[0]</label><br>";
     
     return $html;
 }
@@ -136,7 +136,7 @@ shuffle($QA);
                     }
 
                 ?>
-            <button id ="quiz-btn" type="submit">Submit</button>
+            <button id ="quiz-btn" type="submit" name="submit">Submit</button>
             </form>
         </div> <!-- end of lesson -->
 <!--
@@ -144,60 +144,64 @@ shuffle($QA);
         </div>  end of quiz 
 -->
         <?php 
-    echo "Correct Questions";
+    echo "<br> Correct Questions <br>";
 	$score = 0;
 //        var_dump($_POST);
 	if (!empty($_POST['Q1'])){
 		if($_POST['Q1']) {
             $score+=1;
-            echo "Question 1 ";
+            echo "Question 1 <br>";
             }
         }
 	if (!empty($_POST['Q2'])){
 		if($_POST['Q2']) {
             $score+=1;
-            echo "Question 2 ";
+            echo "Question 2 <br>";
             }
         }
 	if (!empty($_POST['Q3'])){
 		if($_POST['Q3']) {
             $score+=1;
-            echo "Question 3 ";
+            echo "Question 3 <br>";
             }
         }
 	if (!empty($_POST['Q4'])){
 		if($_POST['Q4']) {
             $score+=1;
-            echo "Question 4 ";
+            echo "Question 4 <br>";
             }
         }
 //		if($_POST['Q4']==0) {
 	if (!empty($_POST['Q5'])){
 		if($_POST['Q5']) {
             $score+=1;
-            echo "Question 5 ";
+            echo "Question 5 <br>";
             }
         }
     $names=$_SESSION['name'];
-		$lesson=1;
+		$lesson=3;
 		$scores=$score;
     //$emailAddress = "RITISTprofessor@gmail.com";
 //	$emailAddress = "rk2384@rit.edu";
-	$emailSubject = "Quiz $lesson Score";
-    $emailBody = "Name is $names \n";
-//	$emailBody .= "LessonID is 1 \n";
-	$emailBody .= "Score is $scores \n";
-	mail($temail, $emailSubject, $emailBody);
-		
-	$stmt = "DELETE FROM UserScore WHERE Username='".$names."' AND LessonID='".$lesson."'";
-    $mysqli->query($stmt);
-    $stmt = $mysqli->prepare("INSERT INTO UserScore(Username, LessonID, Score) VALUES (?,?,?)");
-	$stmt->bind_param("sii", $names, $lesson, $scores); 
-	$stmt->execute();
-	$stmt->close(); ?>
+    if(isset($_POST['submit']))
+    {
+        $emailSubject = "Quiz $lesson Score";
+        $emailBody = "Name is $names \n";
+    //	$emailBody .= "LessonID is 1 \n";
+        $emailBody .= "Score is $scores \n";
+        mail($temail, $emailSubject, $emailBody);
+
+        $stmt = "DELETE FROM UserScore WHERE Username='".$names."' AND LessonID='".$lesson."'";
+        $mysqli->query($stmt);
+        $stmt = $mysqli->prepare("INSERT INTO UserScore(Username, LessonID, Score) VALUES (?,?,?)");
+        $stmt->bind_param("sii", $names, $lesson, $scores); 
+        $stmt->execute();
+        $stmt->close();
+    }
+    ?>
     </div> <!-- end of content -->
     </div> <!-- end of right column -->
 </div>
 <?php 
-include "../foot.php" 
+include "../foot.php";
 ?>
