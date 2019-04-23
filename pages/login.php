@@ -1,6 +1,9 @@
 <?php 
     session_start();
     session_name("login");
+    if(isset($_SESSION['name'])){
+        $welcome = $_SESSION['name'];
+    }
 
     $title = "Login";
     $content ="Login";

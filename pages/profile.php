@@ -1,6 +1,9 @@
 <?php 
     session_start();
     session_name("login");
+    if(isset($_SESSION['name'])){
+        $welcome = $_SESSION['name'];
+    }
 
     //check if they should have access
 	if(!$_SESSION['login']){
