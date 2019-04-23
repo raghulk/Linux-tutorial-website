@@ -3,9 +3,6 @@ session_start();
 session_name("login");
 if($_SESSION['login'] != true){
     header("Location: login.php");
-}else{
-    header("Location:profile.php");
-    $welcome = $_SESSION['name'];
 }
 
     $title = "Quiz 1";
@@ -143,31 +140,41 @@ shuffle($QA);
         </div> <!-- end of lesson -->
         <div class ="quiz">
         </div> <!-- end of quiz -->
-    </div> <!-- end of content -->
-    </div> <!-- end of right column -->
-</div>
-<?php 
+    <?php 
+    echo "Corect Questions";
 	$score = 0;
+        var_dump($_POST);
 	if (!empty($_POST['Q1'])){
 		if($_POST['Q1']) {
-		$score+=1;
-		}}
+            $score+=1;
+            echo "Question 1 ";
+            }
+        }
 	if (!empty($_POST['Q2'])){
 		if($_POST['Q2']) {
-		$score+=1;
-		}}
+            $score+=1;
+            echo "Question 2 ";
+            }
+        }
 	if (!empty($_POST['Q3'])){
 		if($_POST['Q3']) {
-		$score+=1;
-		}}
+            $score+=1;
+            echo "Question 3 ";
+            }
+        }
 	if (!empty($_POST['Q4'])){
 		if($_POST['Q4']) {
-		$score+=1;
-		}}
+            $score+=1;
+            echo "Question 4 ";
+            }
+        }
+//		if($_POST['Q4']==0) {
 	if (!empty($_POST['Q5'])){
 		if($_POST['Q5']) {
-		$score+=1;
-		}}
+            $score+=1;
+            echo "Question 5 ";
+            }
+        }
     $names=$_SESSION['name'];
 		$lesson=1;
 		$scores=$score;
@@ -184,5 +191,9 @@ shuffle($QA);
     $stmt = $mysqli->prepare("INSERT INTO UserScore(Username, LessonID, Score) VALUES (?,?,?)");
 	$stmt->bind_param("sii", $names, $lesson, $scores); 
 	$stmt->execute();
-	$stmt->close();
-include "../foot.php" ?>
+	$stmt->close(); ?>
+        </div> <!-- end of content -->
+    </div> <!-- end of right column -->
+</div>
+
+<?php include "../foot.php" ?>
