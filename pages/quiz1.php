@@ -123,7 +123,7 @@ shuffle($QA);
     <div class="content" >
         <h1> Quiz 1 </h1>
         <div class="lesson quiz-sec">
-            <form action="quiz1.php" method="POST" onsubmit="return validateForm();">>
+            <form action="quiz1.php" method="POST" onsubmit="return validateForm();">
                 <?php 
                     $i=1;
                 //build each question and echo
