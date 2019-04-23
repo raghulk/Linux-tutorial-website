@@ -37,8 +37,8 @@ label{
 .login input[type=submit] {
     background-color:#044B7F;
     color:white;
+    cursor: pointer;
 }
-
 #register-link p{
     text-align:right;
 }
