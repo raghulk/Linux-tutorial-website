@@ -6,11 +6,6 @@
 	if(!$_SESSION['login']){
 		header('Location: login.php');
 	}
-    else{
-        echo '<script type="text/javascript">',
-     'login_usernamechange();',
-     '</script>'
-    }
     
     $title = "Profile";
     $content ="Profile";

@@ -16,6 +16,8 @@ if($_SESSION['login'] != true){
 
     require "../../../../dbConnect.inc";
 
+$temail=$_SESSION['teacher-email'];
+
 //get questions
 if ($mysqli) {
     $sql = 'select QuestionID, Question from Questions where LessonID = "2";';
@@ -120,7 +122,7 @@ shuffle($QA);
     <div class="content" >
         <h1> Quiz 2 </h1>
         <div class="lesson quiz-sec">
-	 <form action="quiz2.php" method="GET" onsubmit="return validateForm();">
+	 <form action="quiz2.php" method="POST" onsubmit="return validateForm();">
                 <?php 
                     $i=1;
                 //build each question and echo
@@ -140,36 +142,36 @@ shuffle($QA);
 </div>
 <?php 
 	$score = 0;
-	if (!empty($_GET['Q1'])){
-		if($_GET['Q1']) {
+	if (!empty($_POST['Q1'])){
+		if($_POST['Q1']) {
 		$score+=1;
 		}}
-	if (!empty($_GET['Q2'])){
-		if($_GET['Q2']) {
+	if (!empty($_POST['Q2'])){
+		if($_POST['Q2']) {
 		$score+=1;
 		}}
-	if (!empty($_GET['Q3'])){
-		if($_GET['Q3']) {
+	if (!empty($_POST['Q3'])){
+		if($_POST['Q3']) {
 		$score+=1;
 		}}
-	if (!empty($_GET['Q4'])){
-		if($_GET['Q4']) {
+	if (!empty($_POST['Q4'])){
+		if($_POST['Q4']) {
 		$score+=1;
 		}}
-	if (!empty($_GET['Q5'])){
-		if($_GET['Q5']) {
+	if (!empty($_POST['Q5'])){
+		if($_POST['Q5']) {
 		$score+=1;
 		}}
     $names=$_SESSION['name'];
         $lesson=2;
         $scores=$score;
     //$emailAddress = "RITISTprofessor@gmail.com";
-	$emailAddress = "crs2417@rit.edu";
+//	$emailAddress = "crs2417@rit.edu";
 	$emailSubject = "Quiz $lesson Score";
     $emailBody = "Name is $names \n";
 	//$emailBody .= "LessonID is 2 \n";
 	$emailBody .= "Score is $scores \n";
-	mail($emailAddress, $emailSubject, $emailBody);
+	mail($temail, $emailSubject, $emailBody);
 
     $stmt = "DELETE FROM UserScore WHERE Username='".$names."' AND LessonID='".$lesson."'";
     $mysqli->query($stmt);

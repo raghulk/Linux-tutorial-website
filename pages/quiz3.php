@@ -18,6 +18,7 @@ if($_SESSION['login'] != true){
     require "../../../../dbConnect.inc";
 
 $name = $_SESSION['name'];
+$temail=$_SESSION['teacher-email'];
 
 //get questions
 if ($mysqli) {
@@ -143,37 +144,37 @@ shuffle($QA);
 <?php 
 //var_dump($_GET);
 $score = 0;
-	if (!empty($_GET['Q1'])){
-		if($_GET['Q1']) {
+	if (!empty($_POST['Q1'])){
+		if($_POST['Q1']) {
 		$score+=1;
 		}}
-	if (!empty($_GET['Q2'])){
-		if($_GET['Q2']) {
+	if (!empty($_POST['Q2'])){
+		if($_POST['Q2']) {
 		$score+=1;
 		}}
-	if (!empty($_GET['Q3'])){
-		if($_GET['Q3']) {
+	if (!empty($_POST['Q3'])){
+		if($_POST['Q3']) {
 		$score+=1;
 		}}
-	if (!empty($_GET['Q4'])){
-		if($_GET['Q4']) {
+	if (!empty($_POST['Q4'])){
+		if($_POST['Q4']) {
 		$score+=1;
 		}}
-	if (!empty($_GET['Q5'])){
-		if($_GET['Q5']) {
+	if (!empty($_POST['Q5'])){
+		if($_POST['Q5']) {
 		$score+=1;
 		}}		
 //	var_dump($_SESSION);	
     $names=$_SESSION['name'];
 		$lesson=3;
 		$scores=$score;
-    //$emailAddress = "RITISTprofessor@gmail.com";
-	$emailAddress = "rk2384@rit.edu";
+//    $emailAddress = "RITISTprofessor@gmail.com";
+//	$emailAddress = "rk2384@rit.edu";
 	$emailSubject = "Quiz $lesson Score";
     $emailBody = "Name is $names \n";
 //	$emailBody .= "LessonID is 3 \n";
 	$emailBody .= "Score is $scores \n";
-	mail($emailAddress, $emailSubject, $emailBody);
+	mail($temail, $emailSubject, $emailBody);
 		
 	$stmt = "DELETE FROM UserScore WHERE Username='".$names."' AND LessonID='".$lesson."'";
     $mysqli->query($stmt);
