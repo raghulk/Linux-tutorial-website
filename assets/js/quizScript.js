@@ -107,7 +107,7 @@
         let selectLabel = "l"+num+"-"+select;
         let correct = null;
 
-        console.log("in correct");
+       // console.log("in correct");
         let aArray = [a1,a2,a3,a4];
         let lArray = [l1,l2,l3,l4];
         
@@ -120,9 +120,9 @@
         for (let i =0; i<aArray.length; i++){
             let curr = document.getElementById(aArray[i]);
             if (curr.value ==0){
-                    console.log("incorrect"+curr);
+                   // console.log("incorrect"+curr);
             } else if (curr.value ==1){
-                    console.log("correct"+curr);
+                    //console.log("correct"+curr);
                     correct = aArray[i];
             }
         }
